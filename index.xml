@@ -6,6 +6,7 @@
     <description>Recent content on abekoh&#39;s tech note</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
+    <copyright>©abekoh</copyright>
     <lastBuildDate>Sun, 08 Dec 2019 14:06:13 +0900</lastBuildDate>
     
 	<atom:link href="https://blog.abekoh.dev/index.xml" rel="self" type="application/rss+xml" />
@@ -23,11 +24,11 @@ https://blog.abekoh.dev</description>
     
     <item>
       <title>My First Post</title>
-      <link>https://blog.abekoh.dev/my-first-post/</link>
+      <link>https://blog.abekoh.dev/posts/my-first-post/</link>
       <pubDate>Sun, 08 Dec 2019 14:05:51 +0900</pubDate>
       
-      <guid>https://blog.abekoh.dev/my-first-post/</guid>
-      <description>This is my first post.</description>
+      <guid>https://blog.abekoh.dev/posts/my-first-post/</guid>
+      <description>あいうえお import sys sys.exit(1)</description>
     </item>
     
   </channel>
