@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
     <copyright>©abekoh</copyright>
-    <lastBuildDate>Sun, 08 Dec 2019 14:06:13 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 11 Dec 2019 00:48:56 +0900</lastBuildDate>
     
 	<atom:link href="https://blog.abekoh.dev/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>ブログはじめました</title>
+      <link>https://blog.abekoh.dev/posts/start-blog/</link>
+      <pubDate>Wed, 11 Dec 2019 00:48:56 +0900</pubDate>
+      
+      <guid>https://blog.abekoh.dev/posts/start-blog/</guid>
+      <description>技術ブログはじめました。 黙々と勉強しつつもアウトプットの機会もなく、なんだかもったいないと思いはじめまして、 今度こそと続けていきたい所存です</description>
+    </item>
     
     <item>
       <title>About</title>
@@ -19,15 +28,6 @@
       
       <guid>https://blog.abekoh.dev/about/</guid>
       <description>Profile 名前: abekoh 福岡出身、東京在住。 某Web系企業で、Web広告関係のエンジニアやってます。 メインで扱う言語はJavaです。 学生時代は画像系の機械</description>
-    </item>
-    
-    <item>
-      <title>My First Post</title>
-      <link>https://blog.abekoh.dev/posts/my-first-post/</link>
-      <pubDate>Sun, 08 Dec 2019 14:05:51 +0900</pubDate>
-      
-      <guid>https://blog.abekoh.dev/posts/my-first-post/</guid>
-      <description>あいうえお import sys sys.exit(1)</description>
     </item>
     
   </channel>

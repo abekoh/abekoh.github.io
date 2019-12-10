@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on abekoh&#39;s tech note</title>
-    <link>https://blog.abekoh.dev/posts/</link>
-    <description>Recent content in Posts on abekoh&#39;s tech note</description>
+    <title>diary on abekoh&#39;s tech note</title>
+    <link>https://blog.abekoh.dev/tags/diary/</link>
+    <description>Recent content in diary on abekoh&#39;s tech note</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
     <copyright>©abekoh</copyright>
     <lastBuildDate>Wed, 11 Dec 2019 00:48:56 +0900</lastBuildDate>
     
-	<atom:link href="https://blog.abekoh.dev/posts/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://blog.abekoh.dev/tags/diary/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
