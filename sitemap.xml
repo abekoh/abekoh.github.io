@@ -3,22 +3,47 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://blog.abekoh.dev/</loc>
-    <lastmod>2019-12-11T00:48:56+09:00</lastmod>
+    <loc>https://blog.abekoh.dev/posts/qiita-snipslack-vim/</loc>
+    <lastmod>2019-12-11T23:52:09+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://blog.abekoh.dev/tags/diary/</loc>
-    <lastmod>2019-12-11T00:48:56+09:00</lastmod>
+    <loc>https://blog.abekoh.dev/</loc>
+    <lastmod>2019-12-11T23:52:09+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.abekoh.dev/tags/neovim/</loc>
+    <lastmod>2019-12-11T23:52:09+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://blog.abekoh.dev/posts/</loc>
-    <lastmod>2019-12-11T00:48:56+09:00</lastmod>
+    <lastmod>2019-12-11T23:52:09+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.abekoh.dev/tags/qiita/</loc>
+    <lastmod>2019-12-11T23:52:09+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.abekoh.dev/tags/slack/</loc>
+    <lastmod>2019-12-11T23:52:09+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://blog.abekoh.dev/tags/</loc>
+    <lastmod>2019-12-11T23:52:09+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.abekoh.dev/tags/vim/</loc>
+    <lastmod>2019-12-11T23:52:09+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.abekoh.dev/tags/diary/</loc>
     <lastmod>2019-12-11T00:48:56+09:00</lastmod>
   </url>
   

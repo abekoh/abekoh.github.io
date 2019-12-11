@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on abekoh&#39;s tech note</title>
-    <link>https://blog.abekoh.dev/posts/</link>
-    <description>Recent content in Posts on abekoh&#39;s tech note</description>
+    <title>Qiita on abekoh&#39;s tech note</title>
+    <link>https://blog.abekoh.dev/tags/qiita/</link>
+    <description>Recent content in Qiita on abekoh&#39;s tech note</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
     <copyright>©abekoh</copyright>
     <lastBuildDate>Wed, 11 Dec 2019 23:52:09 +0900</lastBuildDate>
     
-	<atom:link href="https://blog.abekoh.dev/posts/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://blog.abekoh.dev/tags/qiita/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -19,15 +19,6 @@
       
       <guid>https://blog.abekoh.dev/posts/qiita-snipslack-vim/</guid>
       <description>以前Qiitaに投稿した記事の紹介。 記事: Slackでスニペットを共有するためのVimプラグインつくってみた GitHub: abekoh/snipslack.vim VimからSlackのスニペ</description>
-    </item>
-    
-    <item>
-      <title>ブログはじめました</title>
-      <link>https://blog.abekoh.dev/posts/start-blog/</link>
-      <pubDate>Wed, 11 Dec 2019 00:48:56 +0900</pubDate>
-      
-      <guid>https://blog.abekoh.dev/posts/start-blog/</guid>
-      <description>技術ブログはじめました。 黙々と勉強しつつもアウトプットの機会もなく、なんだかもったいないと思いはじめまして、 今度こそと続けていきたい所存です</description>
     </item>
     
   </channel>
