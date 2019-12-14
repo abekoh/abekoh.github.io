@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>diary on abekoh&#39;s tech note</title>
+    <link>https://blog.abekoh.dev/categories/diary/</link>
+    <description>Recent content in diary on abekoh&#39;s tech note</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>© abekoh</copyright>
+    <lastBuildDate>Wed, 11 Dec 2019 00:48:56 +0900</lastBuildDate>
+    
+	<atom:link href="https://blog.abekoh.dev/categories/diary/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>ブログはじめました</title>
+      <link>https://blog.abekoh.dev/post/start-blog/</link>
+      <pubDate>Wed, 11 Dec 2019 00:48:56 +0900</pubDate>
+      
+      <guid>https://blog.abekoh.dev/post/start-blog/</guid>
+      <description>技術ブログはじめました。
+黙々と勉強しつつもアウトプットの機会もなく、なんだかもったいないと思いはじめまして、 今度こそと続けていきたい所存です。
+このブログはHugoっていう静的ページエンジンでつくってみました。
+すべてGithub上で解決するのは良いですね。
+CI連携などもまぁいい感じに設定できたので、そのこともおいおい記そうかと思います。
+どうぞよろしくお願いいたします。</description>
+    </item>
+    
+  </channel>
+</rss>

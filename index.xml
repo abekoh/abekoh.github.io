@@ -5,7 +5,7 @@
     <link>https://blog.abekoh.dev/</link>
     <description>Recent content on abekoh&#39;s tech note</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>ja-jp</language>
+    <copyright>© abekoh</copyright>
     <lastBuildDate>Sat, 14 Dec 2019 13:40:05 +0900</lastBuildDate>
     
 	<atom:link href="https://blog.abekoh.dev/index.xml" rel="self" type="application/rss+xml" />
@@ -13,10 +13,10 @@
     
     <item>
       <title>Hugo, Github Pages, CircleCIつかってブログ構築</title>
-      <link>https://blog.abekoh.dev/how-to-build-this-blog/</link>
+      <link>https://blog.abekoh.dev/post/how-to-build-this-blog/</link>
       <pubDate>Sat, 14 Dec 2019 13:40:05 +0900</pubDate>
       
-      <guid>https://blog.abekoh.dev/how-to-build-this-blog/</guid>
+      <guid>https://blog.abekoh.dev/post/how-to-build-this-blog/</guid>
       <description>このブログの構築メモ。 やっぱりブログもGitHubで管理できたらいいなーと探したら、この組み合わせで簡単にいい感じにできそうだったのでやってみた。
 Hugoとは https://gohugo.io/
 Go製の静的サイト生成ツール。 とにかく簡単にブログがつくれる。ブログじゃなくてもポートフォリオサイトやOSSプロジェクトページなんかもいける。
@@ -36,10 +36,10 @@ version: 2.1 orbs: hugo: circleci/hugo@0.4.1 jobs: deploy: docker: - image: cibu
     
     <item>
       <title>[Qiita] Slackでスニペットを共有するためのVimプラグインつくってみた</title>
-      <link>https://blog.abekoh.dev/qiita-snipslack-vim/</link>
+      <link>https://blog.abekoh.dev/post/qiita-snipslack-vim/</link>
       <pubDate>Wed, 11 Dec 2019 23:52:09 +0900</pubDate>
       
-      <guid>https://blog.abekoh.dev/qiita-snipslack-vim/</guid>
+      <guid>https://blog.abekoh.dev/post/qiita-snipslack-vim/</guid>
       <description>以前Qiitaに投稿した記事の紹介。
 記事: Slackでスニペットを共有するためのVimプラグインつくってみた
 GitHub: abekoh/snipslack.vim
@@ -53,10 +53,10 @@ Vim Scriptにしっかり向き合えて楽しかった。正規表現とか結�
     
     <item>
       <title>ブログはじめました</title>
-      <link>https://blog.abekoh.dev/start-blog/</link>
+      <link>https://blog.abekoh.dev/post/start-blog/</link>
       <pubDate>Wed, 11 Dec 2019 00:48:56 +0900</pubDate>
       
-      <guid>https://blog.abekoh.dev/start-blog/</guid>
+      <guid>https://blog.abekoh.dev/post/start-blog/</guid>
       <description>技術ブログはじめました。
 黙々と勉強しつつもアウトプットの機会もなく、なんだかもったいないと思いはじめまして、 今度こそと続けていきたい所存です。
 このブログはHugoっていう静的ページエンジンでつくってみました。

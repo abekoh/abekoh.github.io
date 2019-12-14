@@ -5,7 +5,7 @@
     <link>https://blog.abekoh.dev/tags/slack/</link>
     <description>Recent content in Slack on abekoh&#39;s tech note</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>ja-jp</language>
+    <copyright>© abekoh</copyright>
     <lastBuildDate>Wed, 11 Dec 2019 23:52:09 +0900</lastBuildDate>
     
 	<atom:link href="https://blog.abekoh.dev/tags/slack/index.xml" rel="self" type="application/rss+xml" />
@@ -13,10 +13,10 @@
     
     <item>
       <title>[Qiita] Slackでスニペットを共有するためのVimプラグインつくってみた</title>
-      <link>https://blog.abekoh.dev/qiita-snipslack-vim/</link>
+      <link>https://blog.abekoh.dev/post/qiita-snipslack-vim/</link>
       <pubDate>Wed, 11 Dec 2019 23:52:09 +0900</pubDate>
       
-      <guid>https://blog.abekoh.dev/qiita-snipslack-vim/</guid>
+      <guid>https://blog.abekoh.dev/post/qiita-snipslack-vim/</guid>
       <description>以前Qiitaに投稿した記事の紹介。
 記事: Slackでスニペットを共有するためのVimプラグインつくってみた
 GitHub: abekoh/snipslack.vim

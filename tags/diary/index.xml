@@ -5,7 +5,7 @@
     <link>https://blog.abekoh.dev/tags/diary/</link>
     <description>Recent content in diary on abekoh&#39;s tech note</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>ja-jp</language>
+    <copyright>© abekoh</copyright>
     <lastBuildDate>Wed, 11 Dec 2019 00:48:56 +0900</lastBuildDate>
     
 	<atom:link href="https://blog.abekoh.dev/tags/diary/index.xml" rel="self" type="application/rss+xml" />
@@ -13,10 +13,10 @@
     
     <item>
       <title>ブログはじめました</title>
-      <link>https://blog.abekoh.dev/start-blog/</link>
+      <link>https://blog.abekoh.dev/post/start-blog/</link>
       <pubDate>Wed, 11 Dec 2019 00:48:56 +0900</pubDate>
       
-      <guid>https://blog.abekoh.dev/start-blog/</guid>
+      <guid>https://blog.abekoh.dev/post/start-blog/</guid>
       <description>技術ブログはじめました。
 黙々と勉強しつつもアウトプットの機会もなく、なんだかもったいないと思いはじめまして、 今度こそと続けていきたい所存です。
 このブログはHugoっていう静的ページエンジンでつくってみました。

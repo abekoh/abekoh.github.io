@@ -5,7 +5,7 @@
     <link>https://blog.abekoh.dev/tags/hugo/</link>
     <description>Recent content in Hugo on abekoh&#39;s tech note</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>ja-jp</language>
+    <copyright>© abekoh</copyright>
     <lastBuildDate>Sat, 14 Dec 2019 13:40:05 +0900</lastBuildDate>
     
 	<atom:link href="https://blog.abekoh.dev/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
@@ -13,10 +13,10 @@
     
     <item>
       <title>Hugo, Github Pages, CircleCIつかってブログ構築</title>
-      <link>https://blog.abekoh.dev/how-to-build-this-blog/</link>
+      <link>https://blog.abekoh.dev/post/how-to-build-this-blog/</link>
       <pubDate>Sat, 14 Dec 2019 13:40:05 +0900</pubDate>
       
-      <guid>https://blog.abekoh.dev/how-to-build-this-blog/</guid>
+      <guid>https://blog.abekoh.dev/post/how-to-build-this-blog/</guid>
       <description>このブログの構築メモ。 やっぱりブログもGitHubで管理できたらいいなーと探したら、この組み合わせで簡単にいい感じにできそうだったのでやってみた。
 Hugoとは https://gohugo.io/
 Go製の静的サイト生成ツール。 とにかく簡単にブログがつくれる。ブログじゃなくてもポートフォリオサイトやOSSプロジェクトページなんかもいける。

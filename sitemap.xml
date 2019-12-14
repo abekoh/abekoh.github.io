@@ -28,7 +28,7 @@
   </url>
   
   <url>
-    <loc>https://blog.abekoh.dev/how-to-build-this-blog/</loc>
+    <loc>https://blog.abekoh.dev/post/how-to-build-this-blog/</loc>
     <lastmod>2019-12-14T13:40:05+09:00</lastmod>
   </url>
   
@@ -43,7 +43,12 @@
   </url>
   
   <url>
-    <loc>https://blog.abekoh.dev/qiita-snipslack-vim/</loc>
+    <loc>https://blog.abekoh.dev/post/qiita-snipslack-vim/</loc>
+    <lastmod>2019-12-11T23:52:09+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.abekoh.dev/categories/</loc>
     <lastmod>2019-12-11T23:52:09+09:00</lastmod>
   </url>
   
@@ -63,8 +68,18 @@
   </url>
   
   <url>
+    <loc>https://blog.abekoh.dev/categories/tech/</loc>
+    <lastmod>2019-12-11T23:52:09+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://blog.abekoh.dev/tags/vim/</loc>
     <lastmod>2019-12-11T23:52:09+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.abekoh.dev/categories/diary/</loc>
+    <lastmod>2019-12-11T00:48:56+09:00</lastmod>
   </url>
   
   <url>
@@ -73,13 +88,21 @@
   </url>
   
   <url>
-    <loc>https://blog.abekoh.dev/start-blog/</loc>
+    <loc>https://blog.abekoh.dev/post/start-blog/</loc>
     <lastmod>2019-12-11T00:48:56+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://blog.abekoh.dev/about/</loc>
     <lastmod>2019-12-08T14:06:13+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.abekoh.dev/authors/</loc>
+  </url>
+  
+  <url>
+    <loc>https://blog.abekoh.dev/series/</loc>
   </url>
   
 </urlset>
