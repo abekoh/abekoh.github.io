@@ -1,89 +1,217 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Neovim - abekoh&#39;s tech note</title><link rel="icon" type="image/png" href=icons/avater.png /><meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="alternate" type="application/rss+xml" href="https://blog.abekoh.dev/tags/neovim/index.xml" title="abekoh's tech note" />
-	<meta property="og:title" content="Neovim" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://blog.abekoh.dev/tags/neovim/" />
-<meta property="og:updated_time" content="2019-12-11T23:52:09+09:00" />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Neovim"/>
-<meta name="twitter:description" content=""/>
-<link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,300italic,400italic|Raleway:200,300" rel="stylesheet">
+<!doctype html>
 
-	<link rel="stylesheet" type="text/css" media="screen" href="https://blog.abekoh.dev/css/normalize.css" />
-	<link rel="stylesheet" type="text/css" media="screen" href="https://blog.abekoh.dev/css/main.css" />
-	<link rel="stylesheet" type="text/css" href="https://blog.abekoh.dev/css/custom.css" />
-	
-
-	<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-	<script src="https://blog.abekoh.dev/js/main.js"></script>
-</head>
-
-
-<body>
-	<div class="container wrapper list">
-		<div class="header">
-	<h1 class="site-title"><a href="https://blog.abekoh.dev/">abekoh&#39;s tech note</a></h1>
-	<div class="site-description"><h2>雑多になんでも技術メモ</h2><nav class="nav social">
-			<ul class="flat"><a href="https://github.com/abekoh" title="Github"><i data-feather="github"></i></a><a href="https://twitter.com/abekoh_bcky" title="Twitter"><i data-feather="twitter"></i></a></ul>
-		</nav>
-	</div>
-
-	<nav class="nav">
-		<ul class="flat">
-			
-			<li>
-				<a href="/">Home</a>
-			</li>
-			
-			<li>
-				<a href="/posts">All posts</a>
-			</li>
-			
-			<li>
-				<a href="/about">About</a>
-			</li>
-			
-			<li>
-				<a href="/tags">Tags</a>
-			</li>
-			
-		</ul>
-	</nav>
-</div>
-
-
-		
-			<h1>Entries tagged - "Neovim"</h1>
-		
-
-		<ul class="posts"><li class="post">
-				<a href="/posts/qiita-snipslack-vim/">[Qiita] Slackでスニペットを共有するためのVimプラグインつくってみた</a> <span class="meta">Dec 11, 2019</span>
-			</li></ul>
-	</div>
-
-	<div class="footer wrapper">
-	<nav class="nav">
-		<div> ©abekoh |  <a href="https://github.com/vividvilla/ezhil">Ezhil theme</a> | Built with <a href="https://gohugo.io">Hugo</a></div>
-	</nav>
-</div>
-
-
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-154358525-1', 'auto');
-	
-	ga('send', 'pageview');
+<html lang="en" class="h-100">
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="generator" content="Hugo 0.61.0" />
+  <link rel="stylesheet" href="https://blog.abekoh.dev/css/bootstrap.min.css">
+  
+  
+  <title>Neovim | abekoh&#39;s tech note</title>
+  <style>
+.container {
+  max-width: 700px;
 }
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
-<script>feather.replace()</script>
-</body>
+#nav a {
+  font-weight: bold;
+  color: inherit;
+}
+#nav a.nav-link-active {
+  background-color: #212529;
+  color: #fff;
+}
+#nav-border {
+  border-bottom: 1px solid #212529;
+}
+#main {
+  margin-top: 1em;
+  margin-bottom: 4em;
+}
+#home-jumbotron {
+  background-color: inherit;
+}
+#footer .container {
+  padding: 1em 0;
+}
+#footer a {
+  color: inherit;
+  text-decoration: underline;
+}
+.font-125 {
+  font-size: 125%;
+}
+.tag-btn {
+  margin-bottom: 0.3em;
+}
+pre {
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 16px;
+}
+pre code {
+  padding: 0;
+  font-size: inherit;
+  color: inherit; 
+  background-color: transparent;
+  border-radius: 0;
+}
+code {
+  padding: 2px 4px;
+  font-size: 90%;
+  color: #c7254e;
+  background-color: #f9f2f4;
+  border-radius: 4px;
+}
+img,
+iframe,
+embed,
+video,
+audio {
+  max-width: 100%;
+}
+.card-img,
+.card-img-top,
+.card-img-bottom {
+  width: initial;
+}
+</style>
+</head>
+  <body class="d-flex flex-column h-100">
+    <div id="nav-border" class="container">
+  <nav id="nav" class="nav justify-content-center">
+  
+  
+  
+    
+    
+      
+      
+      
+      
+      
+        
+      
+    
+    
+    <a class="nav-link " href="/"><i data-feather="home"></i> Home</a>
+  
+    
+    
+      
+      
+      
+      
+      
+        
+      
+    
+    
+    <a class="nav-link " href="/posts/"><i data-feather="edit"></i> Blog</a>
+  
+    
+    
+      
+      
+      
+      
+      
+       
+        
+        
+      
+    
+    
+    <a class="nav-link nav-link-active" href="/tags/"><i data-feather="tag"></i> Tags</a>
+  
+    
+    
+      
+      
+      
+      
+      
+        
+      
+    
+    
+    <a class="nav-link " href="/about/"><i data-feather="smile"></i> About</a>
+  
+    
+    
+      
+      
+      
+      
+      
+        
+      
+    
+    
+    <a class="nav-link " href="/index.xml"><i data-feather="rss"></i> RSS</a>
+  
+  </nav>
+</div>
 
+    <div class="container">
+      <main id="main">
+        
+
+<h1>Neovim</h1>
+
+
+<p>
+  <a class="font-125" href="https://blog.abekoh.dev/posts/qiita-snipslack-vim/">[Qiita] Slackでスニペットを共有するためのVimプラグインつくってみた</a>
+  <br>
+  
+
+<i data-feather="calendar"></i> <time datetime="2019-12-11">2019/12/11</time>
+
+  <br>
+  <i data-feather="tag"></i>
+  
+  
+  <a class="btn btn-sm btn-outline-dark tag-btn" href="https://blog.abekoh.dev/tags/vim">Vim</a>
+  
+  
+  <a class="btn btn-sm btn-outline-dark tag-btn" href="https://blog.abekoh.dev/tags/neovim">Neovim</a>
+  
+  
+  <a class="btn btn-sm btn-outline-dark tag-btn" href="https://blog.abekoh.dev/tags/slack">Slack</a>
+  
+  
+  <a class="btn btn-sm btn-outline-dark tag-btn" href="https://blog.abekoh.dev/tags/qiita">Qiita</a>
+  
+
+</p>
+
+
+
+      </main>
+    </div>
+    
+<footer id="footer" class="mt-auto text-center text-muted">
+  <div class="container">
+    Made with <a href="https://gohugo.io/">Hugo</a> &amp; <a href="https://github.com/zwbetz-gh/vanilla-bootstrap-hugo-theme">Vanilla</a>
+  </div>
+</footer>
+
+    <script src="https://blog.abekoh.dev/js/feather.min.js"></script>
+<script>
+  feather.replace()
+</script>
+
+
+    
+  
+  <script>
+  window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+  ga('create', 'UA-154358525-1', 'auto');
+  ga('send', 'pageview');
+  </script>
+  <script async src='https://www.google-analytics.com/analytics.js'></script>
+  
+
+  </body>
 </html>
