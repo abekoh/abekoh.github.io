@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on abekoh&#39;s tech note</title>
-    <link>https://blog.abekoh.dev/post/</link>
-    <description>Recent content in Posts on abekoh&#39;s tech note</description>
+    <title>Hugo on abekoh&#39;s tech note</title>
+    <link>https://blog.abekoh.dev/tags/hugo/</link>
+    <description>Recent content in Hugo on abekoh&#39;s tech note</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
     <lastBuildDate>Sat, 14 Dec 2019 13:40:05 +0900</lastBuildDate>
     
-	<atom:link href="https://blog.abekoh.dev/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://blog.abekoh.dev/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -32,37 +32,6 @@ https://circleci.com/orbs/registry/orb/circleci/hugo
  CircleCIでgithub pagesに自動デプロイする CircleCIでHugoを実行してGitHub Pagesにデプロイ  引っかかったのが、ssh鍵設定してもcloneできない問題。 こちら参考に、StrictHostKeyChecking=noにすれば解決しました。
 最終的に.circleci/config.ymlはこんな感じ。 なれてきたらまた直していきたい。
 version: 2.1 orbs: hugo: circleci/hugo@0.4.1 jobs: deploy: docker: - image: cibuilds/base steps: - add_ssh_keys: # CirlceCIのSSH Permissionsに設定したSSH Keyのfingerprintを設定 fingerprints: - &amp;#34;SO:ME:FIN:G:ER:PR:IN:T&amp;#34; # ビルドしたworkspaceをもってくる - attach_workspace: at: . - deploy: name: deploy to Github Pages command: | # ssh警告無視 echo &amp;#34;HostName github.</description>
-    </item>
-    
-    <item>
-      <title>[Qiita] Slackでスニペットを共有するためのVimプラグインつくってみた</title>
-      <link>https://blog.abekoh.dev/qiita-snipslack-vim/</link>
-      <pubDate>Wed, 11 Dec 2019 23:52:09 +0900</pubDate>
-      
-      <guid>https://blog.abekoh.dev/qiita-snipslack-vim/</guid>
-      <description>以前Qiitaに投稿した記事の紹介。
-記事: Slackでスニペットを共有するためのVimプラグインつくってみた
-GitHub: abekoh/snipslack.vim
-VimからSlackのスニペットに、お手軽にポストできるプラグインつくってみた記事です。
-2018年の会社の新卒有志Advent Calendarに参加して書きました。
-Vimmerとしては一度はプラグインつくってみたい、そんな意欲で書きました。
-Vim Scriptにしっかり向き合えて楽しかった。正規表現とか結構独特。業務などに役立つかはさておき。
-作ったものの、実は最近はあまり自分でも使っていない。。
-社内独自のスニペットサービスが使い勝手優秀で、結局それに頼っています。</description>
-    </item>
-    
-    <item>
-      <title>ブログはじめました</title>
-      <link>https://blog.abekoh.dev/start-blog/</link>
-      <pubDate>Wed, 11 Dec 2019 00:48:56 +0900</pubDate>
-      
-      <guid>https://blog.abekoh.dev/start-blog/</guid>
-      <description>技術ブログはじめました。
-黙々と勉強しつつもアウトプットの機会もなく、なんだかもったいないと思いはじめまして、 今度こそと続けていきたい所存です。
-このブログはHugoっていう静的ページエンジンでつくってみました。
-すべてGithub上で解決するのは良いですね。
-CI連携などもまぁいい感じに設定できたので、そのこともおいおい記そうかと思います。
-どうぞよろしくお願いいたします。</description>
     </item>
     
   </channel>
