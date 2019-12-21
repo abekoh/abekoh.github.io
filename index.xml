@@ -21,6 +21,15 @@
     </item>
     
     <item>
+      <title>ブログのtweetテスト</title>
+      <link>https://blog.abekoh.dev/post/test2/</link>
+      <pubDate>Sat, 21 Dec 2019 21:17:43 +0900</pubDate>
+      
+      <guid>https://blog.abekoh.dev/post/test2/</guid>
+      <description>ブログ投稿時のTweetテストです</description>
+    </item>
+    
+    <item>
       <title>Google API の OAuth 2.0トークン取得するツールつくった</title>
       <link>https://blog.abekoh.dev/post/get-google-token-with-go/</link>
       <pubDate>Sat, 21 Dec 2019 13:52:48 +0900</pubDate>
