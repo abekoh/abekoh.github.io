@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>tech on abekoh&#39;s tech note</title>
-    <link>https://blog.abekoh.dev/categories/tech/</link>
-    <description>Recent content in tech on abekoh&#39;s tech note</description>
+    <title>Google Photos on abekoh&#39;s tech note</title>
+    <link>https://blog.abekoh.dev/tags/google-photos/</link>
+    <description>Recent content in Google Photos on abekoh&#39;s tech note</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>© abekoh</copyright>
     <lastBuildDate>Sat, 21 Dec 2019 13:52:48 +0900</lastBuildDate>
     
-	<atom:link href="https://blog.abekoh.dev/categories/tech/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://blog.abekoh.dev/tags/google-photos/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -26,23 +26,6 @@ abekoh/get-google-tokens
 実行するとURLが表示されるので、アクセス。そしてスコープを許可。「このアプリは確認されていません」と表示されても進める。 リダイレクトされてlocalhostに移った後、ターミナルのほうを確認。Access TokenとRefresh Tokenが表示されている。  仕組みとしては、リダイレクト時にURLパラメータにcode=と認証コードが入るので、 それをWebサーバで受け取って、チャンネル送信して、POSTリクエストでトークン取得するという流れ。
 Go久しぶり書きましたが、こんな感じでWebサーバー立ち上げ簡単にできる点、CLI化も楽な点がよいですね。
 参考  Google API OAuth2.0のアクセストークン&amp;amp;リフレッシュトークン取得手順 2017年2月版 - Qiita  </description>
-    </item>
-    
-    <item>
-      <title>[Qiita] Slackでスニペットを共有するためのVimプラグインつくってみた</title>
-      <link>https://blog.abekoh.dev/post/qiita-snipslack-vim/</link>
-      <pubDate>Wed, 11 Dec 2019 23:52:09 +0900</pubDate>
-      
-      <guid>https://blog.abekoh.dev/post/qiita-snipslack-vim/</guid>
-      <description>以前Qiitaに投稿した記事の紹介。
-記事: Slackでスニペットを共有するためのVimプラグインつくってみた
-GitHub: abekoh/snipslack.vim
-VimからSlackのスニペットに、お手軽にポストできるプラグインつくってみた記事です。
-2018年の会社の新卒有志Advent Calendarに参加して書きました。
-Vimmerとしては一度はプラグインつくってみたい、そんな意欲で書きました。
-Vim Scriptにしっかり向き合えて楽しかった。正規表現とか結構独特。業務などに役立つかはさておき。
-作ったものの、実は最近はあまり自分でも使っていない。。
-社内独自のスニペットサービスが使い勝手優秀で、結局それに頼っています。</description>
     </item>
     
   </channel>

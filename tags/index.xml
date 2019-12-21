@@ -6,10 +6,28 @@
     <description>Recent content in Tags on abekoh&#39;s tech note</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>© abekoh</copyright>
-    <lastBuildDate>Sat, 14 Dec 2019 13:40:05 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 21 Dec 2019 13:52:48 +0900</lastBuildDate>
     
 	<atom:link href="https://blog.abekoh.dev/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Go</title>
+      <link>https://blog.abekoh.dev/tags/go/</link>
+      <pubDate>Sat, 21 Dec 2019 13:52:48 +0900</pubDate>
+      
+      <guid>https://blog.abekoh.dev/tags/go/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Google Photos</title>
+      <link>https://blog.abekoh.dev/tags/google-photos/</link>
+      <pubDate>Sat, 21 Dec 2019 13:52:48 +0900</pubDate>
+      
+      <guid>https://blog.abekoh.dev/tags/google-photos/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>CircleCI</title>
