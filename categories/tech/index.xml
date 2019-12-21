@@ -29,6 +29,30 @@ Go久しぶり書きましたが、こんな感じでWebサーバー立ち上げ
     </item>
     
     <item>
+      <title>Hugo, Github Pages, CircleCIつかってブログ構築</title>
+      <link>https://blog.abekoh.dev/post/how-to-build-this-blog/</link>
+      <pubDate>Sat, 14 Dec 2019 13:40:05 +0900</pubDate>
+      
+      <guid>https://blog.abekoh.dev/post/how-to-build-this-blog/</guid>
+      <description>このブログの構築メモ。 やっぱりブログもGitHubで管理できたらいいなーと探したら、この組み合わせで簡単にいい感じにできそうだったのでやってみた。
+Hugoとは https://gohugo.io/
+Go製の静的サイト生成ツール。 とにかく簡単にブログがつくれる。ブログじゃなくてもポートフォリオサイトやOSSプロジェクトページなんかもいける。
+Markdownでかけるのも嬉しい。非常にGitHubフレンドリーな感じ。
+個人的に惜しいと思う点は、超スタンダードな感じのテーマの多くがGPLなところ。 編集中のはPrivateにする場合ここが引っかかってしまうので、なくなくそれらを弾いてテーマ選びました。
+とりあえずこれを無編集で使ってます。
+https://github.com/zwbetz-gh/vanilla-bootstrap-hugo-theme
+→ これに変更しました https://github.com/achary/engimo
+構成 Github Pagesの機能をつかって公開するんですが、Hugoのソース自体はPrivateで管理。 abekoh.github.ioにはCircleCIがmaster pushするだけ。
+CircleCI選んだ理由は、とりあえず有名でモダンなやつ試したかったから。 最近だとGithub Actionsがよかったかな、と後から思ったけどまぁいいか。
+CircleCI設定 hugoのビルドは、Orbがあったのでそれを使う。 Orbはビルド手順のテンプレートみたいなの。
+https://circleci.com/orbs/registry/orb/circleci/hugo
+その後、Github Pagesへのpushは手動で設定。 このあたり参考にさせていただきました。
+ CircleCIでgithub pagesに自動デプロイする CircleCIでHugoを実行してGitHub Pagesにデプロイ  引っかかったのが、ssh鍵設定してもcloneできない問題。 こちら参考に、StrictHostKeyChecking=noにすれば解決しました。
+最終的に.circleci/config.ymlはこんな感じ。 なれてきたらまた直していきたい。
+version: 2.1 orbs: hugo: circleci/hugo@0.4.1 jobs: deploy: docker: - image: cibuilds/base steps: - add_ssh_keys: # CirlceCIのSSH Permissionsに設定したSSH Keyのfingerprintを設定 fingerprints: - &amp;#34;SO:ME:FIN:G:ER:PR:IN:T&amp;#34; # ビルドしたworkspaceをもってくる - attach_workspace: at: . - deploy: name: deploy to Github Pages command: | # ssh警告無視 echo &amp;#34;HostName github.</description>
+    </item>
+    
+    <item>
       <title>[Qiita] Slackでスニペットを共有するためのVimプラグインつくってみた</title>
       <link>https://blog.abekoh.dev/post/qiita-snipslack-vim/</link>
       <pubDate>Wed, 11 Dec 2019 23:52:09 +0900</pubDate>
