@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>勉強会 on abekoh&#39;s tech note</title>
+    <link>https://blog.abekoh.dev/tags/%E5%8B%89%E5%BC%B7%E4%BC%9A/</link>
+    <description>Recent content in 勉強会 on abekoh&#39;s tech note</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>© abekoh</copyright>
+    <lastBuildDate>Mon, 30 Dec 2019 02:05:02 +0900</lastBuildDate>
+    
+	<atom:link href="https://blog.abekoh.dev/tags/%E5%8B%89%E5%BC%B7%E4%BC%9A/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Spring Fest 2019 参加レポート</title>
+      <link>https://blog.abekoh.dev/post/spring-fest-2019/</link>
+      <pubDate>Mon, 30 Dec 2019 02:05:02 +0900</pubDate>
+      
+      <guid>https://blog.abekoh.dev/post/spring-fest-2019/</guid>
+      <description>12/18に開催されたSpring Fest 2019に参加してきました。 その時聞いたものについてのレポートです。
+基調講演：From Spring Boot 2.2 to Spring Boot 2.3 スライド
+Spring Boot 2.2での目玉機能、2.3で追加される予定のもの、Spring Cloudについての紹介でした。 気になったものいくつか取り上げます。
+Health Indicator Group ヘルスチェックのエンドポイントを複数、グループ別で設定できる機能。
+management.endpoint.health.group.liveness.include=ping management.endpoint.health.group.readiness.include=db,redis ↑の設定の場合、 /actguator/health/livenessと/actuator/health/redinessが提供される。
+サンプルの設定どおり、KubernetesのLiveness/Readiness Probeと相性よさげ。
+Immutable Configuration Properties コンストラクタインジェクションでCongiurationPropertiesが設定可能に。 →Setter不要。
+またKotlinだとdata classにも適用できるとか。
+GraalVM Javaだけどネイティブアプリ化させたりできるやつ。 昨年のSpring Festでは出たばっかりのころだったけど、順調にサポートが厚くなってきている感じ。
+2020年に出るSpring 5.3になると、諸々設定が楽になるとのこと。
+Cloud Native Buildpacks ソースコードを解析してOCI標準イメージを作成するツール。
+(OCI標準イメージとは、Open Container Initiativeが定めた標準仕様に沿ったコンテナイメージのこと。 https://www.publickey1.jp/blog/17/open_container_initiativeoci_v10.html)
+packというCLI使って簡単に試せる。
+https://github.com/buildpacks/pack
+特にKubernetes向けの場合、kpackというのも提供されている。 https://github.com/pivotal/kpack
+Spring Boot爆速開発超絶技巧 スライド
+ひたすらIntelliJのショートカット・機能を紹介していただくというセッション。 結構知らないショートカットもあって為になりました。
+使えそうと思ったのが、breakpointのオプション。 「この条件に一致したらbreak」とか「breakせずにprintだけ行う」とかできる、知らなかった。。
+LINE公式アカウントのチャットシステムにおけるSpringおよびWebFluxの活用事例 スライド
+Spring WebFluxを実際にプロダクトに適用した事例紹介。
+WebFluxを利用することで、各リクエストをノンブロッキングで処理することで、1つのイベントループスレッドで複数リクエストを捌けるようになる。そしてサーバー数が減少につながる。
+実際うまく稼働できているとのこと。このあたり理解が浅いと感じたので、実際に触ってみようと思います。
+NissanConnectの舞台裏で動くSpring Boot／Spring Cloud 〜Microserviceの実運用の事例〜 スライド</description>
+    </item>
+    
+  </channel>
+</rss>

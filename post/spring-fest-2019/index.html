@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang='en'><head>
+  <meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='description' content='12/18に開催されたSpring Fest 2019に参加してきました。 その時聞いたものについてのレポートです。
+基調講演：From Spring Boot 2.2 to Spring Boot 2.3 スライド
+Spring Boot 2.2での目玉機能、2.3で追加される予定のもの、Spring Cloudについての紹介でした。 気になったものいくつか取り上げます。
+Health Indicator Group ヘルスチェックのエンドポイントを複数、グループ別で設定できる機能。
+management.endpoint.health.group.liveness.include=ping management.endpoint.health.group.readiness.include=db,redis ↑の設定の場合、 /actguator/health/livenessと/actuator/health/redinessが提供される。
+サンプルの設定どおり、KubernetesのLiveness/Readiness Probeと相性よさげ。
+Immutable Configuration Properties コンストラクタインジェクションでCongiurationPropertiesが設定可能に。 →Setter不要。
+またKotlinだとdata classにも適用できるとか。
+GraalVM Javaだけどネイティブアプリ化させたりできるやつ。 昨年のSpring Festでは出たばっかりのころだったけど、順調にサポートが厚くなってきている感じ。
+2020年に出るSpring 5.3になると、諸々設定が楽になるとのこと。
+Cloud Native Buildpacks ソースコードを解析してOCI標準イメージを作成するツール。
+(OCI標準イメージとは、Open Container Initiativeが定めた標準仕様に沿ったコンテナイメージのこと。 https://www.publickey1.jp/blog/17/open_container_initiativeoci_v10.html)
+packというCLI使って簡単に試せる。
+https://github.com/buildpacks/pack
+特にKubernetes向けの場合、kpackというのも提供されている。 https://github.com/pivotal/kpack
+Spring Boot爆速開発超絶技巧 スライド
+ひたすらIntelliJのショートカット・機能を紹介していただくというセッション。 結構知らないショートカットもあって為になりました。
+使えそうと思ったのが、breakpointのオプション。 「この条件に一致したらbreak」とか「breakせずにprintだけ行う」とかできる、知らなかった。。
+LINE公式アカウントのチャットシステムにおけるSpringおよびWebFluxの活用事例 スライド
+Spring WebFluxを実際にプロダクトに適用した事例紹介。
+WebFluxを利用することで、各リクエストをノンブロッキングで処理することで、1つのイベントループスレッドで複数リクエストを捌けるようになる。そしてサーバー数が減少につながる。
+実際うまく稼働できているとのこと。このあたり理解が浅いと感じたので、実際に触ってみようと思います。
+NissanConnectの舞台裏で動くSpring Boot／Spring Cloud 〜Microserviceの実運用の事例〜 スライド'>
+<meta name='theme-color' content='#44ccff'>
+
+<meta property='og:title' content='Spring Fest 2019 参加レポート • abekoh&#39;s tech note'>
+<meta property='og:description' content='12/18に開催されたSpring Fest 2019に参加してきました。 その時聞いたものについてのレポートです。
+基調講演：From Spring Boot 2.2 to Spring Boot 2.3 スライド
+Spring Boot 2.2での目玉機能、2.3で追加される予定のもの、Spring Cloudについての紹介でした。 気になったものいくつか取り上げます。
+Health Indicator Group ヘルスチェックのエンドポイントを複数、グループ別で設定できる機能。
+management.endpoint.health.group.liveness.include=ping management.endpoint.health.group.readiness.include=db,redis ↑の設定の場合、 /actguator/health/livenessと/actuator/health/redinessが提供される。
+サンプルの設定どおり、KubernetesのLiveness/Readiness Probeと相性よさげ。
+Immutable Configuration Properties コンストラクタインジェクションでCongiurationPropertiesが設定可能に。 →Setter不要。
+またKotlinだとdata classにも適用できるとか。
+GraalVM Javaだけどネイティブアプリ化させたりできるやつ。 昨年のSpring Festでは出たばっかりのころだったけど、順調にサポートが厚くなってきている感じ。
+2020年に出るSpring 5.3になると、諸々設定が楽になるとのこと。
+Cloud Native Buildpacks ソースコードを解析してOCI標準イメージを作成するツール。
+(OCI標準イメージとは、Open Container Initiativeが定めた標準仕様に沿ったコンテナイメージのこと。 https://www.publickey1.jp/blog/17/open_container_initiativeoci_v10.html)
+packというCLI使って簡単に試せる。
+https://github.com/buildpacks/pack
+特にKubernetes向けの場合、kpackというのも提供されている。 https://github.com/pivotal/kpack
+Spring Boot爆速開発超絶技巧 スライド
+ひたすらIntelliJのショートカット・機能を紹介していただくというセッション。 結構知らないショートカットもあって為になりました。
+使えそうと思ったのが、breakpointのオプション。 「この条件に一致したらbreak」とか「breakせずにprintだけ行う」とかできる、知らなかった。。
+LINE公式アカウントのチャットシステムにおけるSpringおよびWebFluxの活用事例 スライド
+Spring WebFluxを実際にプロダクトに適用した事例紹介。
+WebFluxを利用することで、各リクエストをノンブロッキングで処理することで、1つのイベントループスレッドで複数リクエストを捌けるようになる。そしてサーバー数が減少につながる。
+実際うまく稼働できているとのこと。このあたり理解が浅いと感じたので、実際に触ってみようと思います。
+NissanConnectの舞台裏で動くSpring Boot／Spring Cloud 〜Microserviceの実運用の事例〜 スライド'>
+<meta property='og:url' content='https://blog.abekoh.dev/post/spring-fest-2019/'>
+<meta property='og:site_name' content='abekoh&#39;s tech note'>
+<meta property='og:type' content='article'><meta property='article:section' content='post'><meta property='article:tag' content='Spring'><meta property='article:tag' content='Java'><meta property='article:tag' content='勉強会'><meta property='article:published_time' content='2019-12-30T02:05:02&#43;09:00'/><meta property='article:modified_time' content='2019-12-30T02:05:02&#43;09:00'/><meta name='twitter:card' content='summary'>
+
+<meta name="generator" content="Hugo 0.62.0" />
+
+  <title>Spring Fest 2019 参加レポート • abekoh&#39;s tech note</title>
+  <link rel='canonical' href='https://blog.abekoh.dev/post/spring-fest-2019/'>
+  
+  
+  <link rel='icon' href='/images/avater.png'>
+<link rel='stylesheet' href='/assets/css/main.6a060eb7.css'><style>
+:root{--color-accent:#44ccff;}
+</style>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-154358525-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+  
+
+</head>
+<body class='page type-post has-sidebar'>
+
+  <div class='site'><div id='sidebar' class='sidebar'>
+  <a class='screen-reader-text' href='#main-menu'>Skip to Main Menu</a>
+
+  <div class='container'><section class='widget widget-about sep-after'>
+  <header>
+    
+    <div class='logo'>
+      <a href='/'>
+        <img src='/images/avater.png'>
+      </a>
+    </div>
+    
+    <h2 class='title site-title '>
+      <a href='/'>
+      abekoh&#39;s tech note
+      </a>
+    </h2>
+    <div class='desc'>
+    雑多になんでも技術メモ
+    </div>
+  </header>
+
+</section>
+<section class='widget widget-search sep-after'>
+  <header>
+    <h4 class='title widget-title'>Search</h4>
+  </header>
+
+  <form action='/search' id='search-form' class='search-form'>
+    <label>
+      <span class='screen-reader-text'>Search</span>
+      <input id='search-term' class='search-term' type='search' name='q' placeholder='Search&hellip;'>
+    </label></form>
+
+</section>
+<section class='widget widget-social_menu sep-after'><header>
+    <h4 class='title widget-title'>Social</h4>
+  </header><nav aria-label='Social Menu'>
+    <ul><li>
+        <a href='https://github.com/abekoh' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Open Github account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='https://twitter.com/abekoh_bcky' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Open Twitter account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/>
+  
+</svg>
+</a>
+      </li></ul>
+  </nav>
+</section><section class='widget widget-taxonomy_cloud sep-after'>
+  <header>
+    <h4 class='title widget-title'>Tags</h4>
+  </header>
+
+  <div class='container list-container'>
+  <ul class='list taxonomy-cloud'><li>
+        <a href='/tags/circleci/' style='font-size:1em'>CircleCI</a>
+      </li><li>
+        <a href='/tags/diary/' style='font-size:1em'>diary</a>
+      </li><li>
+        <a href='/tags/github-pages/' style='font-size:1em'>Github Pages</a>
+      </li><li>
+        <a href='/tags/go/' style='font-size:1em'>Go</a>
+      </li><li>
+        <a href='/tags/google-domains/' style='font-size:1em'>Google Domains</a>
+      </li><li>
+        <a href='/tags/google-photos/' style='font-size:1em'>Google Photos</a>
+      </li><li>
+        <a href='/tags/hugo/' style='font-size:1em'>Hugo</a>
+      </li><li>
+        <a href='/tags/java/' style='font-size:1em'>Java</a>
+      </li><li>
+        <a href='/tags/neovim/' style='font-size:1em'>Neovim</a>
+      </li><li>
+        <a href='/tags/qiita/' style='font-size:1em'>Qiita</a>
+      </li><li>
+        <a href='/tags/slack/' style='font-size:1em'>Slack</a>
+      </li><li>
+        <a href='/tags/spring/' style='font-size:1em'>Spring</a>
+      </li><li>
+        <a href='/tags/vim/' style='font-size:1em'>Vim</a>
+      </li><li>
+        <a href='/tags/%E5%8B%89%E5%BC%B7%E4%BC%9A/' style='font-size:1em'>勉強会</a>
+      </li></ul>
+</div>
+
+
+</section>
+</div>
+
+  <div class='sidebar-overlay'></div>
+</div><div class='main'><nav id='main-menu' class='menu main-menu' aria-label='Main Menu'>
+  <div class='container'>
+    <a class='screen-reader-text' href='#content'>Skip to Content</a>
+
+<button id='sidebar-toggler' class='sidebar-toggler' aria-controls='sidebar'>
+  <span class='screen-reader-text'>Toggle Sidebar</span>
+  <span class='open'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="3" y1="12" x2="21" y2="12" />
+  <line x1="3" y1="6" x2="21" y2="6" />
+  <line x1="3" y1="18" x2="21" y2="18" />
+  
+</svg>
+</span>
+  <span class='close'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="18" y1="6" x2="6" y2="18" />
+  <line x1="6" y1="6" x2="18" y2="18" />
+  
+</svg>
+</span>
+</button>
+    <ul><li class='item'>
+        <a href='/'>Home</a>
+      </li><li class='item'>
+        <a href='/about'>About</a>
+      </li><li class='item'>
+        <a href='/post'>Posts</a>
+      </li></ul>
+  </div>
+</nav><div class='header-widgets'>
+        <div class='container'></div>
+      </div>
+
+      <header id='header' class='header site-header'>
+        <div class='container sep-after'>
+          <div class='header-info'><p class='site-title title'>abekoh&#39;s tech note</p><p class='desc site-desc'>雑多になんでも技術メモ</p>
+          </div>
+        </div>
+      </header>
+
+      <main id='content'>
+
+
+<article lang='en' class='entry'>
+  <header class='header entry-header'>
+  <div class='container sep-after'>
+    <div class='header-info'>
+      <h1 class='title'>Spring Fest 2019 参加レポート</h1>
+      
+
+    </div>
+    <div class='entry-meta'>
+  <span class='posted-on'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+  <line x1="16" y1="2" x2="16" y2="6"/>
+  <line x1="8" y1="2" x2="8" y2="6"/>
+  <line x1="3" y1="10" x2="21" y2="10"/>
+  
+</svg>
+<span class='screen-reader-text'>Posted on </span>
+  <time class='entry-date' datetime='2019-12-30T02:05:02&#43;09:00'>2019/12/30</time>
+</span>
+
+  
+  
+<span class='reading-time'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <circle cx="12" cy="12" r="10"/>
+  <polyline points="12 6 12 12 15 15"/>
+  
+</svg>
+One min read
+</span>
+
+
+  
+  
+</div>
+
+
+  </div>
+</header>
+
+  
+  
+
+  <div class='container entry-content'>
+  <p>12/18に開催されたSpring Fest 2019に参加してきました。
+その時聞いたものについてのレポートです。</p>
+<h2 id="from-spring-boot-22-to-spring-boot-23">基調講演：From Spring Boot 2.2 to Spring Boot 2.3</h2>
+<p><a href="https://www.slideshare.net/makingx/from-spring-boot-22-to-spring-boot-23-jsug">スライド</a></p>
+<p>Spring Boot 2.2での目玉機能、2.3で追加される予定のもの、Spring Cloudについての紹介でした。
+気になったものいくつか取り上げます。</p>
+<h4 id="health-indicator-group">Health Indicator Group</h4>
+<p>ヘルスチェックのエンドポイントを複数、グループ別で設定できる機能。</p>
+<pre><code>management.endpoint.health.group.liveness.include=ping
+management.endpoint.health.group.readiness.include=db,redis
+</code></pre><p>↑の設定の場合、
+<code>/actguator/health/liveness</code>と<code>/actuator/health/rediness</code>が提供される。</p>
+<p>サンプルの設定どおり、KubernetesのLiveness/Readiness Probeと相性よさげ。</p>
+<h4 id="immutable-configuration-properties">Immutable Configuration Properties</h4>
+<p>コンストラクタインジェクションでCongiurationPropertiesが設定可能に。
+→Setter不要。</p>
+<p>またKotlinだとdata classにも適用できるとか。</p>
+<h4 id="graalvm">GraalVM</h4>
+<p>Javaだけどネイティブアプリ化させたりできるやつ。
+昨年のSpring Festでは出たばっかりのころだったけど、順調にサポートが厚くなってきている感じ。</p>
+<p>2020年に出るSpring 5.3になると、諸々設定が楽になるとのこと。</p>
+<h4 id="cloud-native-buildpacks">Cloud Native Buildpacks</h4>
+<p>ソースコードを解析してOCI標準イメージを作成するツール。</p>
+<p>(OCI標準イメージとは、Open Container Initiativeが定めた標準仕様に沿ったコンテナイメージのこと。 <a href="https://www.publickey1.jp/blog/17/open_container_initiativeoci_v10.html">https://www.publickey1.jp/blog/17/open_container_initiativeoci_v10.html</a>)</p>
+<p>packというCLI使って簡単に試せる。<br>
+<a href="https://github.com/buildpacks/pack">https://github.com/buildpacks/pack</a></p>
+<p>特にKubernetes向けの場合、kpackというのも提供されている。
+<a href="https://github.com/pivotal/kpack">https://github.com/pivotal/kpack</a></p>
+<h2 id="spring-boot">Spring Boot爆速開発超絶技巧</h2>
+<p><a href="https://speakerdeck.com/yusuke/spring-boot-and-intellij-idea-technique">スライド</a></p>
+<p>ひたすらIntelliJのショートカット・機能を紹介していただくというセッション。
+結構知らないショートカットもあって為になりました。</p>
+<p>使えそうと思ったのが、breakpointのオプション。
+「この条件に一致したらbreak」とか「breakせずにprintだけ行う」とかできる、知らなかった。。</p>
+<h2 id="linespringwebflux">LINE公式アカウントのチャットシステムにおけるSpringおよびWebFluxの活用事例</h2>
+<p><a href="https://speakerdeck.com/line_developers/examples-of-using-spring-and-webflux-in-the-chat-system-for-line-official-accounts">スライド</a></p>
+<p>Spring WebFluxを実際にプロダクトに適用した事例紹介。</p>
+<p>WebFluxを利用することで、各リクエストをノンブロッキングで処理することで、1つのイベントループスレッドで複数リクエストを捌けるようになる。そしてサーバー数が減少につながる。</p>
+<p>実際うまく稼働できているとのこと。このあたり理解が浅いと感じたので、実際に触ってみようと思います。</p>
+<h2 id="nissanconnectspring-bootspring-cloud-microservice">NissanConnectの舞台裏で動くSpring Boot／Spring Cloud 〜Microserviceの実運用の事例〜</h2>
+<p><a href="https://www.slideshare.net/DaisukeMorishita1/spring-boot-and-spring-cloud-inside-nissanconnect-at-spring-fest-19">スライド</a></p>
+<p>日産車とスマホアプリなどとを連携するシステムの裏側紹介と、Springに関するTips紹介でした。</p>
+<p>Tipsで引っかかりそうと思ったのが、pacheHttpClientのデフォルト接続数問題。<br>
+デフォルトだと同一ドメインに対して同時リクエスト2つまでしかできないので、<code>maxConnPerRoute</code>を設定する必要があるとのこと。実際ぶち当たると苦戦しそうですね。。</p>
+<h2 id="spring-developer--">Spring Developer のための コンテナ入門</h2>
+<p>Google Cloudさんによる、コンテナ、Kubernetesについて入門的な内容でした。</p>
+<p>ここで紹介されていた、Jibはかなり使えそうな印象。</p>
+<p><a href="https://github.com/GoogleContainerTools/jib">https://github.com/GoogleContainerTools/jib</a></p>
+<p>Javaアプリのコンテナイメージを、Dockerfileいらずで作ってくれる優れもの。
+Mavenプラグインも用意されていて、mvnコマンドだけでdocker build, docker pushまでできるみたい。
+CI/CDでも設定削減できたり相性よさそうな気がします。</p>
+<h2 id="quarkus--spring-">Quarkus による超音速な Spring アプリケーション開発</h2>
+<p><a href="https://www.slideshare.net/ChihiroIto1/quarkus-spring">スライド</a></p>
+<p>RedHatさんによるQuarkusの紹介でした。</p>
+<p>Quarkusとは、Kubernetesなどのコンテナ環境に最適化されたJavaアプリを実現するフレームワークのこと。</p>
+<p>フレームワーク起動時に、設定ファイル解析、クラスパス・クラスのスキャン、リフレクションの準備などJava実行時に毎回行う、時間かかるやつを一度だけ行うようにして、起動時間短縮・メモリ使用量削減につなげている。</p>
+<p>また、従来のJITコンパイラ向けでも、GraalVMでネイティブイメージ向けにも両方利用できて、両方ともそれなりに恩恵を受けられるとのこと。</p>
+<h2 id="efficient-web-apps-with-spring-boot-2">Efficient Web Apps with Spring Boot 2</h2>
+<p>その場でSpring MVC -&gt; Spring WebFluxに置き換えるライブコーディングでした。</p>
+<p>非同期化することでUI表示が目に見えて速くなるのが面白かった。</p>
+<h2 id="spring-with-react-for-enterprise-application">Spring with React for Enterprise Application</h2>
+<p><a href="https://speakerdeck.com/sdaigo/spring-with-react-for-enterprise-application">スライド</a></p>
+<p>業務アプリについて、変化できるUI、変化に強いシステムを作り上げる手法について、タグバンガーズさんがやっていることの紹介でした。</p>
+<ul>
+<li>イベントストーミングというモデリング手法の利用。「何が起こったか」「なぜ起こったか」といったことを付箋に書き、それらの関係性をホワイトボードに書いていって、境界づけなど行ってモデリングしていく手法。シンプルでとっつきやすそうでした。</li>
+<li>UIではCSS-in-JSを利用。CSSがどう継承しているかとか分からなくなる事態を防ぐ。JSにうまく組み込むことでコンポーネントごとに管理できるように。</li>
+<li>BEでは、イベントストーミングで分離した対象それぞれ、Springのエコシステムどれ使うか？を考える。それぞれ境界間の関係性に最適なのを選んでいく。</li>
+<li>テストも、付箋の「○○ならば××」というのをそのままテストにできる。</li>
+<li>結合テストのモック化は、Spring Cloud Contract, Pactの組み合わせがおすすめとのこと。</li>
+</ul>
+<p>実際業務アプリ開発に多く関わっているので、参考にしてみたい部分が多くありました。</p>
+<h2 id="heading">全体通しての感想</h2>
+<p>今回よく聞いたキーワードとしては&quot;Reactive&quot;と&quot;Native Image&quot;ですかね。
+どちらもCloud Nativeの流れに沿うようJava, Springを発展させようという動きなのでしょうか。</p>
+<p>また個人的には、昨年に比べて「これ業務に活かせそう」という観点ができて楽しかったです。また来年も来よう。あと月次でやってるようなイベントにも参加してみたい所存です。</p>
+
+</div>
+
+  
+<footer class='entry-footer'>
+  <div class='container sep-before'><div class='categories'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M22,19a2,2,0,0,1-2,2H4a2,2,0,0,1-2-2V5A2,2,0,0,1,4,3H9l2,3h9a2,2,0,0,1,2,2Z"/>
+  
+</svg>
+<span class='screen-reader-text'>Categories: </span><a class='category' href='/categories/tech/'>tech</a></div>
+<div class='tags'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M20.59,13.41l-7.17,7.17a2,2,0,0,1-2.83,0L2,12V2H12l8.59,8.59A2,2,0,0,1,20.59,13.41Z"/>
+  <line x1="7" y1="7" x2="7" y2="7"/>
+  
+</svg>
+<span class='screen-reader-text'>Tags: </span><a class='tag' href='/tags/spring/'>Spring</a>, <a class='tag' href='/tags/java/'>Java</a>, <a class='tag' href='/tags/%E5%8B%89%E5%BC%B7%E4%BC%9A/'>勉強会</a></div>
+
+  </div>
+</footer>
+
+
+</article>
+
+<nav class='entry-nav'>
+  <div class='container'><div class='prev-entry sep-before'>
+      <a href='/post/get-google-token-with-go/'>
+        <span aria-hidden='true'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="20" y1="12" x2="4" y2="12"/>
+  <polyline points="10 18 4 12 10 6"/>
+  
+</svg>
+ Previous</span>
+        <span class='screen-reader-text'>Previous post: </span>Google API の OAuth 2.0トークン取得するツールつくった</a>
+    </div></div>
+</nav>
+
+
+
+
+      </main>
+
+      <footer id='footer' class='footer'>
+        <div class='container sep-before'><div class='copyright'>
+  <p>© abekoh</p>
+</div>
+
+        </div>
+      </footer>
+
+    </div>
+  </div><script>window.__assets_js_src="/assets/js/"</script>
+
+<script src='https://blog.abekoh.dev/assets/js/main.67d669ac.js'></script>
+
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
