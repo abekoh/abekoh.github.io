@@ -41,7 +41,7 @@ version: 2.1 orbs: hugo: circleci/hugo@0.4.1 jobs: deploy: docker: - image: cibu
 <meta property='og:site_name' content='abekoh&#39;s tech note'>
 <meta property='og:type' content='article'><meta property='article:section' content='post'><meta property='article:tag' content='Hugo'><meta property='article:tag' content='CircleCI'><meta property='article:tag' content='Github Pages'><meta property='article:tag' content='Google Domains'><meta property='article:published_time' content='2019-12-14T13:40:05&#43;09:00'/><meta property='article:modified_time' content='2019-12-14T13:40:05&#43;09:00'/><meta name='twitter:card' content='summary'>
 
-<meta name="generator" content="Hugo 0.62.0" />
+<meta name="generator" content="Hugo 0.62.2" />
 
   <title>Hugo, Github Pages, CircleCIつかってブログ構築 • abekoh&#39;s tech note</title>
   <link rel='canonical' href='https://blog.abekoh.dev/post/how-to-build-this-blog/'>
@@ -257,7 +257,7 @@ One min read
   <div class='container entry-content'>
   <p>このブログの構築メモ。
 やっぱりブログもGitHubで管理できたらいいなーと探したら、この組み合わせで簡単にいい感じにできそうだったのでやってみた。</p>
-<h2 id="hugo">Hugoとは</h2>
+<h2 id="hugoとは">Hugoとは</h2>
 <p><a href="https://gohugo.io/">https://gohugo.io/</a></p>
 <p>Go製の静的サイト生成ツール。
 とにかく簡単にブログがつくれる。ブログじゃなくてもポートフォリオサイトやOSSプロジェクトページなんかもいける。</p>
@@ -267,13 +267,13 @@ One min read
 <p>とりあえずこれを無編集で使ってます。</p>
 <p><del>https://github.com/zwbetz-gh/vanilla-bootstrap-hugo-theme</del></p>
 <p>→ これに変更しました <a href="https://github.com/achary/engimo">https://github.com/achary/engimo</a></p>
-<h2 id="heading">構成</h2>
+<h2 id="構成">構成</h2>
 <p><img src="/images/circleci-github-hugo.png" alt="全体構成"></p>
 <p>Github Pagesの機能をつかって公開するんですが、Hugoのソース自体はPrivateで管理。
 abekoh.github.ioにはCircleCIがmaster pushするだけ。</p>
 <p>CircleCI選んだ理由は、とりあえず有名でモダンなやつ試したかったから。
 最近だとGithub Actionsがよかったかな、と後から思ったけどまぁいいか。</p>
-<h2 id="circleci">CircleCI設定</h2>
+<h2 id="circleci設定">CircleCI設定</h2>
 <p>hugoのビルドは、Orbがあったのでそれを使う。
 Orbはビルド手順のテンプレートみたいなの。</p>
 <p><a href="https://circleci.com/orbs/registry/orb/circleci/hugo">https://circleci.com/orbs/registry/orb/circleci/hugo</a></p>
@@ -339,7 +339,7 @@ workflows:
           filters:
             branches:
               only: master
-</code></pre></div><h2 id="heading-1">ドメイン設定</h2>
+</code></pre></div><h2 id="ドメイン設定">ドメイン設定</h2>
 <p>ついでにドメインも取得してみたので設定。</p>
 <p>Google Domainsで、devドメインつくりました。
 年間1200円、安いですね。</p>
@@ -348,7 +348,7 @@ workflows:
 <p><img src="/images/github-pages-domain-config.png" alt="Github Pages">
 abekoh/abekoh.github.ioのSettingsでドメイン設定するだけ。</p>
 <p>なお、CNAMEファイルがpush時に毎回消えてしまうような設定になっているので、.cricleci/config.ymlのpipelineのとおりCNAMEを毎回作成するようにしています。</p>
-<h2 id="heading-2">感想</h2>
+<h2 id="感想">感想</h2>
 <p>やっぱりGitHub上で完結できるのよいですね。書きたいネタをIssueに登録、PR作って解決という流れで一人で運用ができて楽しい。</p>
 
 </div>

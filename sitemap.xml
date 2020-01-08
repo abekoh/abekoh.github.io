@@ -113,12 +113,12 @@
   </url>
   
   <url>
-    <loc>https://blog.abekoh.dev/categories/diary/</loc>
+    <loc>https://blog.abekoh.dev/tags/diary/</loc>
     <lastmod>2019-12-11T00:48:56+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://blog.abekoh.dev/tags/diary/</loc>
+    <loc>https://blog.abekoh.dev/categories/diary/</loc>
     <lastmod>2019-12-11T00:48:56+09:00</lastmod>
   </url>
   
@@ -130,6 +130,10 @@
   <url>
     <loc>https://blog.abekoh.dev/about/</loc>
     <lastmod>2019-12-08T14:06:13+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.abekoh.dev/search/</loc>
   </url>
   
   <url>

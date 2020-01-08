@@ -27,7 +27,7 @@ Go久しぶり書きましたが、こんな感じでWebサーバー立ち上げ
 <meta property='og:site_name' content='abekoh&#39;s tech note'>
 <meta property='og:type' content='article'><meta property='article:section' content='post'><meta property='article:tag' content='Go'><meta property='article:tag' content='Google Photos'><meta property='article:published_time' content='2019-12-21T13:52:48&#43;09:00'/><meta property='article:modified_time' content='2019-12-21T13:52:48&#43;09:00'/><meta name='twitter:card' content='summary'>
 
-<meta name="generator" content="Hugo 0.62.0" />
+<meta name="generator" content="Hugo 0.62.2" />
 
   <title>Google API の OAuth 2.0トークン取得するツールつくった • abekoh&#39;s tech note</title>
   <link rel='canonical' href='https://blog.abekoh.dev/post/get-google-token-with-go/'>
@@ -269,7 +269,7 @@ GCPサービスみたくサービスアカウント使う、ってことはで�
 <p>仕組みとしては、リダイレクト時にURLパラメータに<code>code=</code>と認証コードが入るので、
 それをWebサーバで受け取って、チャンネル送信して、POSTリクエストでトークン取得するという流れ。</p>
 <p>Go久しぶり書きましたが、こんな感じでWebサーバー立ち上げ簡単にできる点、CLI化も楽な点がよいですね。</p>
-<h2 id="heading">参考</h2>
+<h2 id="参考">参考</h2>
 <ul>
 <li><a href="https://qiita.com/iwaseasahi/items/2363dc1d246bc06baeae">Google API OAuth2.0のアクセストークン&amp;リフレッシュトークン取得手順 2017年2月版 - Qiita</a></li>
 </ul>
