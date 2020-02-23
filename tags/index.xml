@@ -6,7 +6,7 @@
     <description>Recent content in Tags on abekoh&#39;s tech note</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>© abekoh</copyright>
-    <lastBuildDate>Mon, 30 Dec 2019 02:05:02 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 23 Feb 2020 18:20:11 +0900</lastBuildDate>
     
 	<atom:link href="https://blog.abekoh.dev/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,9 +14,27 @@
     <item>
       <title>Java</title>
       <link>https://blog.abekoh.dev/tags/java/</link>
-      <pubDate>Mon, 30 Dec 2019 02:05:02 +0900</pubDate>
+      <pubDate>Sun, 23 Feb 2020 18:20:11 +0900</pubDate>
       
       <guid>https://blog.abekoh.dev/tags/java/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>JavaScript</title>
+      <link>https://blog.abekoh.dev/tags/javascript/</link>
+      <pubDate>Sun, 23 Feb 2020 18:20:11 +0900</pubDate>
+      
+      <guid>https://blog.abekoh.dev/tags/javascript/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>読書</title>
+      <link>https://blog.abekoh.dev/tags/%E8%AA%AD%E6%9B%B8/</link>
+      <pubDate>Sun, 23 Feb 2020 18:20:11 +0900</pubDate>
+      
+      <guid>https://blog.abekoh.dev/tags/%E8%AA%AD%E6%9B%B8/</guid>
       <description></description>
     </item>
     

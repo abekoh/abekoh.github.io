@@ -6,10 +6,31 @@
     <description>Recent content in tech on abekoh&#39;s tech note</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>© abekoh</copyright>
-    <lastBuildDate>Mon, 30 Dec 2019 02:05:02 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 23 Feb 2020 18:20:11 +0900</lastBuildDate>
     
 	<atom:link href="https://blog.abekoh.dev/categories/tech/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>『開眼! JavaScript』読んだ</title>
+      <link>https://blog.abekoh.dev/post/javascript-enlightenment/</link>
+      <pubDate>Sun, 23 Feb 2020 18:20:11 +0900</pubDate>
+      
+      <guid>https://blog.abekoh.dev/post/javascript-enlightenment/</guid>
+      <description>Oreillyから出てる『開眼！ JavaScript ――言語仕様から学ぶJavaScriptの本質』の読書メモです。
+https://www.oreilly.co.jp/books/9784873116211/
+仕事でもWebフロントアプリを触ることがあるものの、既存のコードを雰囲気で改修する程度で、今ひとつJSの挙動など理解できていなかったのでその辺りが知りたく。 ちょうどこの本が「JavaScript特有の癖、落とし穴」にフォーカスを当てていて、大変参考になりました。
+以下、刺さったところの個人的メモ。
+JSは基本なんでもオブジェクト、プリミティブでもオブジェクトのように扱える number, string, boolean, null, undefinedはプリミティブ、他はすべてオブジェクト扱い。 Array、Functionも結局Objectを着色したようなイメージ。
+プリミティブであっても、それに対応するラッパーオブジェクト(numberならNumber)のプロパティ、メソッドが呼び出せる。呼び出したとき、そのときだけオブジェクトを生成→破棄という流れになる。
+&amp;#39;hoge&amp;#39;.length // -&amp;gt; 4 JSのオブジェクトはミュータブル、基本なんでも挙動変えられる Arrayなどネイティブコンストラクタを持つオブジェクトであっても、windowなどグローバルオブジェクトであっても、そのプロパティ・メソッドは書き換え可能。 window.alert()でも書き換えて機能停止させることも可能。varつけずfoo = &#39;bar&#39;とやればグローバルオブジェクトのプロパティをいじったことになる。
+もちろん、可能なだけで破壊的な変更は推奨されない。
+thisはそれを呼び出すタイミングで指すものが決まる var foo = &amp;#39;foo&amp;#39;; var myObject = { foo: &amp;#39;I am myObject.foo&amp;#39; }; var sayFoo = function() { console.log(this[&amp;#39;foo&amp;#39;]); }; // myObjectのsayFooメソッドにsayFoo()関数を与える myObject.sayFoo = sayFoo; myObject.sayFoo(); // myObject.sayFoo()内でのthisはmyObjectなので&amp;#39;I am myObject.foo&amp;#39;を出力 sayFoo(); // sayFoo()内でのthisはグローバルオブジェクトなので&amp;#39;foo&amp;#39;を出力 (P.87より引用)
+定義時の&amp;rsquo;foo&#39;が常に出ると予想されるかもだが、実際は実行時のコンテキストに依存する。
+無名関数の即時実行 (function(){ console.log(&amp;#39;hoge&amp;#39;); })() functionの中身を即実行する書き方。 何度かこんなコードみたことあったのに、意味理解できていなかった。。
+関数の巻き上げ function後ろのほうで定義、前のほうで実行でも問題なし。
+foo() // -&amp;gt; hoge function foo() { console.</description>
+    </item>
     
     <item>
       <title>Spring Fest 2019 参加レポート</title>
