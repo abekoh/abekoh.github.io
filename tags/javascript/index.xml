@@ -6,10 +6,34 @@
     <description>Recent content in JavaScript on abekoh&#39;s tech note</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>© abekoh</copyright>
-    <lastBuildDate>Sun, 23 Feb 2020 18:20:11 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 08 Mar 2020 23:30:00 +0900</lastBuildDate>
     
 	<atom:link href="https://blog.abekoh.dev/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Cloud Storage経由でCloud Buildを動かしてデプロイする</title>
+      <link>https://blog.abekoh.dev/post/gcp-deploy-functions-from-storage/</link>
+      <pubDate>Sun, 08 Mar 2020 23:30:00 +0900</pubDate>
+      
+      <guid>https://blog.abekoh.dev/post/gcp-deploy-functions-from-storage/</guid>
+      <description>GCPサービスの1つ、Cloud BuildはいわゆるCI/CDツールです。 GithubなどGitレポジトリに紐づけてトリガーさせて使うのが普通だと思います。トリガーとしても現状、リポジトリ経由しか選択できません。
+しかし、業務のある都合でCloud Storage経由でデプロイしたいことがありまして。 やり方を模索してみてうまくいったので、メモっておきます。
+ソース 今回使ったものすべてこちらに置いてます。
+abekoh/gcp-deploy-from-storage
+全体像 今回はhello-funcというファンクションを、tar.gzに圧縮したソースからCloud Functionsにデプロイするというシナリオとします。 デプロイ対象はApp Engineとか、別のサービスでもいけると思います。
+デプロイ対象 シンプルにHTTPリクエストおくるとHelloが返ってくるFunctionです。Node.jsで書きます。
+// index.js exports.hello = (req, res) =&amp;gt; { res.send(&amp;#39;Hello, world!&amp;#39;); } これと、npm initで生成したpackage.jsonを含んだhello-func.tar.gzを作っておきます。
+tar zcvf hello-func.tar.gz index.js package.json ビルドファンクション実装 メインとなるビルド用ファンクションです。
+Storageのイベントをトリガーとして発火させ、Cloud BuildのAPIを叩いてビルド、デプロイを実行します。
+Node.js用のGoogle APIクライアントとして、普通はこちらを使いますが
+googlespis/google-api-nodejs-client
+READMEにも書かれている通り、GCP上で利用する場合は下記のライブラリのほうが使い勝手いいみたいです。
+googleapis/google-cloud-node
+Cloud Buildの依存を追加します。
+npm init npm i -S @google-cloud/cloudbuild ビルド用Functionsの実装はこちら。
+// index.js &amp;#39;use strict&amp;#39;; const {CloudBuildClient} = require(&amp;#39;@google-cloud/cloudbuild&amp;#39;); exports.build = async file =&amp;gt; { // file.metageneration: メタ情報が更新されるとインクリメントされる値  // ファイル自体が更新されるときは&amp;#39;1&amp;#39;となる  if (file.</description>
+    </item>
     
     <item>
       <title>『開眼! JavaScript』読んだ</title>

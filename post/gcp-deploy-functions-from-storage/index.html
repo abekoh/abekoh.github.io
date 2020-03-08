@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang='en'><head>
+  <meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='description' content='GCPサービスの1つ、Cloud BuildはいわゆるCI/CDツールです。 GithubなどGitレポジトリに紐づけてトリガーさせて使うのが普通だと思います。トリガーとしても現状、リポジトリ経由しか選択できません。
+しかし、業務のある都合でCloud Storage経由でデプロイしたいことがありまして。 やり方を模索してみてうまくいったので、メモっておきます。
+ソース 今回使ったものすべてこちらに置いてます。
+abekoh/gcp-deploy-from-storage
+全体像 今回はhello-funcというファンクションを、tar.gzに圧縮したソースからCloud Functionsにデプロイするというシナリオとします。 デプロイ対象はApp Engineとか、別のサービスでもいけると思います。
+デプロイ対象 シンプルにHTTPリクエストおくるとHelloが返ってくるFunctionです。Node.jsで書きます。
+// index.js exports.hello = (req, res) =&gt; { res.send(&#39;Hello, world!&#39;); } これと、npm initで生成したpackage.jsonを含んだhello-func.tar.gzを作っておきます。
+tar zcvf hello-func.tar.gz index.js package.json ビルドファンクション実装 メインとなるビルド用ファンクションです。
+Storageのイベントをトリガーとして発火させ、Cloud BuildのAPIを叩いてビルド、デプロイを実行します。
+Node.js用のGoogle APIクライアントとして、普通はこちらを使いますが
+googlespis/google-api-nodejs-client
+READMEにも書かれている通り、GCP上で利用する場合は下記のライブラリのほうが使い勝手いいみたいです。
+googleapis/google-cloud-node
+Cloud Buildの依存を追加します。
+npm init npm i -S @google-cloud/cloudbuild ビルド用Functionsの実装はこちら。
+// index.js &#39;use strict&#39;; const {CloudBuildClient} = require(&#39;@google-cloud/cloudbuild&#39;); exports.build = async file =&gt; { // file.metageneration: メタ情報が更新されるとインクリメントされる値  // ファイル自体が更新されるときは&#39;1&#39;となる  if (file.'>
+<meta name='theme-color' content='#44ccff'>
+
+<meta property='og:title' content='Cloud Storage経由でCloud Buildを動かしてデプロイする • abekoh&#39;s tech note'>
+<meta property='og:description' content='GCPサービスの1つ、Cloud BuildはいわゆるCI/CDツールです。 GithubなどGitレポジトリに紐づけてトリガーさせて使うのが普通だと思います。トリガーとしても現状、リポジトリ経由しか選択できません。
+しかし、業務のある都合でCloud Storage経由でデプロイしたいことがありまして。 やり方を模索してみてうまくいったので、メモっておきます。
+ソース 今回使ったものすべてこちらに置いてます。
+abekoh/gcp-deploy-from-storage
+全体像 今回はhello-funcというファンクションを、tar.gzに圧縮したソースからCloud Functionsにデプロイするというシナリオとします。 デプロイ対象はApp Engineとか、別のサービスでもいけると思います。
+デプロイ対象 シンプルにHTTPリクエストおくるとHelloが返ってくるFunctionです。Node.jsで書きます。
+// index.js exports.hello = (req, res) =&gt; { res.send(&#39;Hello, world!&#39;); } これと、npm initで生成したpackage.jsonを含んだhello-func.tar.gzを作っておきます。
+tar zcvf hello-func.tar.gz index.js package.json ビルドファンクション実装 メインとなるビルド用ファンクションです。
+Storageのイベントをトリガーとして発火させ、Cloud BuildのAPIを叩いてビルド、デプロイを実行します。
+Node.js用のGoogle APIクライアントとして、普通はこちらを使いますが
+googlespis/google-api-nodejs-client
+READMEにも書かれている通り、GCP上で利用する場合は下記のライブラリのほうが使い勝手いいみたいです。
+googleapis/google-cloud-node
+Cloud Buildの依存を追加します。
+npm init npm i -S @google-cloud/cloudbuild ビルド用Functionsの実装はこちら。
+// index.js &#39;use strict&#39;; const {CloudBuildClient} = require(&#39;@google-cloud/cloudbuild&#39;); exports.build = async file =&gt; { // file.metageneration: メタ情報が更新されるとインクリメントされる値  // ファイル自体が更新されるときは&#39;1&#39;となる  if (file.'>
+<meta property='og:url' content='https://blog.abekoh.dev/post/gcp-deploy-functions-from-storage/'>
+<meta property='og:site_name' content='abekoh&#39;s tech note'>
+<meta property='og:type' content='article'><meta property='article:section' content='post'><meta property='article:tag' content='GCP'><meta property='article:tag' content='Cloud Functions'><meta property='article:tag' content='Cloud Build'><meta property='article:tag' content='Cloud Storage'><meta property='article:tag' content='Node.js'><meta property='article:tag' content='JavaScript'><meta property='article:published_time' content='2020-03-08T23:30:00&#43;09:00'/><meta property='article:modified_time' content='2020-03-08T23:30:00&#43;09:00'/><meta name='twitter:card' content='summary'>
+
+<meta name="generator" content="Hugo 0.66.0" />
+
+  <title>Cloud Storage経由でCloud Buildを動かしてデプロイする • abekoh&#39;s tech note</title>
+  <link rel='canonical' href='https://blog.abekoh.dev/post/gcp-deploy-functions-from-storage/'>
+  
+  
+  <link rel='icon' href='/images/avater.png'>
+<link rel='stylesheet' href='/assets/css/main.6a060eb7.css'><style>
+:root{--color-accent:#44ccff;}
+</style>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-154358525-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+  
+
+</head>
+<body class='page type-post has-sidebar'>
+
+  <div class='site'><div id='sidebar' class='sidebar'>
+  <a class='screen-reader-text' href='#main-menu'>Skip to Main Menu</a>
+
+  <div class='container'><section class='widget widget-about sep-after'>
+  <header>
+    
+    <div class='logo'>
+      <a href='/'>
+        <img src='/images/avater.png'>
+      </a>
+    </div>
+    
+    <h2 class='title site-title '>
+      <a href='/'>
+      abekoh&#39;s tech note
+      </a>
+    </h2>
+    <div class='desc'>
+    雑多になんでも技術メモ
+    </div>
+  </header>
+
+</section>
+<section class='widget widget-search sep-after'>
+  <header>
+    <h4 class='title widget-title'>Search</h4>
+  </header>
+
+  <form action='/search' id='search-form' class='search-form'>
+    <label>
+      <span class='screen-reader-text'>Search</span>
+      <input id='search-term' class='search-term' type='search' name='q' placeholder='Search&hellip;'>
+    </label></form>
+
+</section>
+<section class='widget widget-social_menu sep-after'><header>
+    <h4 class='title widget-title'>Social</h4>
+  </header><nav aria-label='Social Menu'>
+    <ul><li>
+        <a href='https://github.com/abekoh' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Open Github account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='https://twitter.com/abekoh_bcky' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Open Twitter account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/>
+  
+</svg>
+</a>
+      </li></ul>
+  </nav>
+</section><section class='widget widget-taxonomy_cloud sep-after'>
+  <header>
+    <h4 class='title widget-title'>Tags</h4>
+  </header>
+
+  <div class='container list-container'>
+  <ul class='list taxonomy-cloud'><li>
+        <a href='/tags/circleci/' style='font-size:1em'>CircleCI</a>
+      </li><li>
+        <a href='/tags/cloud-build/' style='font-size:1em'>Cloud Build</a>
+      </li><li>
+        <a href='/tags/cloud-functions/' style='font-size:1em'>Cloud Functions</a>
+      </li><li>
+        <a href='/tags/cloud-storage/' style='font-size:1em'>Cloud Storage</a>
+      </li><li>
+        <a href='/tags/diary/' style='font-size:1em'>diary</a>
+      </li><li>
+        <a href='/tags/gcp/' style='font-size:1em'>GCP</a>
+      </li><li>
+        <a href='/tags/github-pages/' style='font-size:1em'>Github Pages</a>
+      </li><li>
+        <a href='/tags/go/' style='font-size:1em'>Go</a>
+      </li><li>
+        <a href='/tags/google-domains/' style='font-size:1em'>Google Domains</a>
+      </li><li>
+        <a href='/tags/google-photos/' style='font-size:1em'>Google Photos</a>
+      </li><li>
+        <a href='/tags/hugo/' style='font-size:1em'>Hugo</a>
+      </li><li>
+        <a href='/tags/java/' style='font-size:1em'>Java</a>
+      </li><li>
+        <a href='/tags/javascript/' style='font-size:2em'>JavaScript</a>
+      </li><li>
+        <a href='/tags/neovim/' style='font-size:1em'>Neovim</a>
+      </li><li>
+        <a href='/tags/node.js/' style='font-size:1em'>Node.js</a>
+      </li><li>
+        <a href='/tags/qiita/' style='font-size:1em'>Qiita</a>
+      </li><li>
+        <a href='/tags/slack/' style='font-size:1em'>Slack</a>
+      </li><li>
+        <a href='/tags/spring/' style='font-size:1em'>Spring</a>
+      </li><li>
+        <a href='/tags/vim/' style='font-size:1em'>Vim</a>
+      </li><li>
+        <a href='/tags/%E5%8B%89%E5%BC%B7%E4%BC%9A/' style='font-size:1em'>勉強会</a>
+      </li><li>
+        <a href='/tags/%E8%AA%AD%E6%9B%B8/' style='font-size:1em'>読書</a>
+      </li></ul>
+</div>
+
+
+</section>
+</div>
+
+  <div class='sidebar-overlay'></div>
+</div><div class='main'><nav id='main-menu' class='menu main-menu' aria-label='Main Menu'>
+  <div class='container'>
+    <a class='screen-reader-text' href='#content'>Skip to Content</a>
+
+<button id='sidebar-toggler' class='sidebar-toggler' aria-controls='sidebar'>
+  <span class='screen-reader-text'>Toggle Sidebar</span>
+  <span class='open'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="3" y1="12" x2="21" y2="12" />
+  <line x1="3" y1="6" x2="21" y2="6" />
+  <line x1="3" y1="18" x2="21" y2="18" />
+  
+</svg>
+</span>
+  <span class='close'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="18" y1="6" x2="6" y2="18" />
+  <line x1="6" y1="6" x2="18" y2="18" />
+  
+</svg>
+</span>
+</button>
+    <ul><li class='item'>
+        <a href='/'>Home</a>
+      </li><li class='item'>
+        <a href='/about'>About</a>
+      </li><li class='item'>
+        <a href='/post'>Posts</a>
+      </li></ul>
+  </div>
+</nav><div class='header-widgets'>
+        <div class='container'></div>
+      </div>
+
+      <header id='header' class='header site-header'>
+        <div class='container sep-after'>
+          <div class='header-info'><p class='site-title title'>abekoh&#39;s tech note</p><p class='desc site-desc'>雑多になんでも技術メモ</p>
+          </div>
+        </div>
+      </header>
+
+      <main id='content'>
+
+
+<article lang='en' class='entry'>
+  <header class='header entry-header'>
+  <div class='container sep-after'>
+    <div class='header-info'>
+      <h1 class='title'>Cloud Storage経由でCloud Buildを動かしてデプロイする</h1>
+      
+
+    </div>
+    <div class='entry-meta'>
+  <span class='posted-on'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+  <line x1="16" y1="2" x2="16" y2="6"/>
+  <line x1="8" y1="2" x2="8" y2="6"/>
+  <line x1="3" y1="10" x2="21" y2="10"/>
+  
+</svg>
+<span class='screen-reader-text'>Posted on </span>
+  <time class='entry-date' datetime='2020-03-08T23:30:00&#43;09:00'>2020/03/08</time>
+</span>
+
+  
+  
+<span class='reading-time'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <circle cx="12" cy="12" r="10"/>
+  <polyline points="12 6 12 12 15 15"/>
+  
+</svg>
+One min read
+</span>
+
+
+  
+  
+</div>
+
+
+  </div>
+</header>
+
+  
+  
+
+  <div class='container entry-content'>
+  <p>GCPサービスの1つ、<a href="https://cloud.google.com/cloud-build">Cloud Build</a>はいわゆるCI/CDツールです。
+GithubなどGitレポジトリに紐づけてトリガーさせて使うのが普通だと思います。トリガーとしても現状、リポジトリ経由しか選択できません。</p>
+<p>しかし、業務のある都合で<a href="https://cloud.google.com/storage">Cloud Storage</a>経由でデプロイしたいことがありまして。
+やり方を模索してみてうまくいったので、メモっておきます。</p>
+<h2 id="ソース">ソース</h2>
+<p>今回使ったものすべてこちらに置いてます。</p>
+<p><a href="https://github.com/abekoh/gcp-deploy-from-storage">abekoh/gcp-deploy-from-storage</a></p>
+<h2 id="全体像">全体像</h2>
+<p><img src="/images/gcp-deploy-functions-from-storage.svg" alt="全体像"></p>
+<p>今回はhello-funcというファンクションを、tar.gzに圧縮したソースからCloud Functionsにデプロイするというシナリオとします。
+デプロイ対象はApp Engineとか、別のサービスでもいけると思います。</p>
+<h2 id="デプロイ対象">デプロイ対象</h2>
+<p>シンプルにHTTPリクエストおくるとHelloが返ってくるFunctionです。Node.jsで書きます。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">// index.js
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">exports</span>.<span style="color:#a6e22e">hello</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">req</span>, <span style="color:#a6e22e">res</span>) =&gt; {
+  <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">send</span>(<span style="color:#e6db74">&#39;Hello, world!&#39;</span>);
+}
+</code></pre></div><p>これと、<code>npm init</code>で生成したpackage.jsonを含んだhello-func.tar.gzを作っておきます。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">tar zcvf hello-func.tar.gz index.js package.json
+</code></pre></div><h2 id="ビルドファンクション実装">ビルドファンクション実装</h2>
+<p>メインとなるビルド用ファンクションです。<br>
+Storageのイベントをトリガーとして発火させ、Cloud BuildのAPIを叩いてビルド、デプロイを実行します。</p>
+<p>Node.js用のGoogle APIクライアントとして、普通はこちらを使いますが</p>
+<p><a href="https://github.com/googleapis/google-api-nodejs-client">googlespis/google-api-nodejs-client</a></p>
+<p><a href="https://github.com/googleapis/google-api-nodejs-client#working-with-google-cloud-platform-apis">READMEにも書かれている通り</a>、GCP上で利用する場合は下記のライブラリのほうが使い勝手いいみたいです。</p>
+<p><a href="https://github.com/googleapis/google-cloud-node">googleapis/google-cloud-node</a></p>
+<p>Cloud Buildの依存を追加します。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">npm init
+npm i -S @google-cloud/cloudbuild
+</code></pre></div><p>ビルド用Functionsの実装はこちら。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">// index.js
+</span><span style="color:#75715e"></span><span style="color:#e6db74">&#39;use strict&#39;</span>;
+<span style="color:#66d9ef">const</span> {<span style="color:#a6e22e">CloudBuildClient</span>} <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;@google-cloud/cloudbuild&#39;</span>);
+
+<span style="color:#a6e22e">exports</span>.<span style="color:#a6e22e">build</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">async</span> <span style="color:#a6e22e">file</span> =&gt; {
+    <span style="color:#75715e">// file.metageneration: メタ情報が更新されるとインクリメントされる値
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// ファイル自体が更新されるときは&#39;1&#39;となる
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">file</span>.<span style="color:#a6e22e">metageneration</span> <span style="color:#f92672">!==</span> <span style="color:#e6db74">&#39;1&#39;</span>) {
+        <span style="color:#66d9ef">return</span>;
+    }
+    <span style="color:#75715e">// Promiseを返却することで、解決させてfunctionsが終了する
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">CloudBuildClient</span>().<span style="color:#a6e22e">createBuild</span>({
+        <span style="color:#a6e22e">projectId</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">env</span>.<span style="color:#a6e22e">GCP_PROJECT_ID</span>,
+        <span style="color:#a6e22e">build</span><span style="color:#f92672">:</span> {
+            <span style="color:#a6e22e">source</span><span style="color:#f92672">:</span> {
+                <span style="color:#a6e22e">storageSource</span><span style="color:#f92672">:</span> {
+                    <span style="color:#75715e">// バケット名
+</span><span style="color:#75715e"></span>                    <span style="color:#a6e22e">bucket</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">file</span>.<span style="color:#a6e22e">bucket</span>,
+                    <span style="color:#75715e">// ファイル名
+</span><span style="color:#75715e"></span>                    <span style="color:#a6e22e">object</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">file</span>.<span style="color:#a6e22e">name</span>
+                }
+            },
+            <span style="color:#a6e22e">steps</span><span style="color:#f92672">:</span> [
+                {
+                    <span style="color:#e6db74">&#34;name&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;gcr.io/cloud-builders/gcloud&#34;</span>,
+                    <span style="color:#e6db74">&#34;args&#34;</span><span style="color:#f92672">:</span> [
+                        <span style="color:#e6db74">&#34;functions&#34;</span>,
+                        <span style="color:#e6db74">&#34;deploy&#34;</span>,
+                        <span style="color:#e6db74">&#34;hello-func&#34;</span>,
+                        <span style="color:#e6db74">&#34;--entry-point=hello&#34;</span>,
+                        <span style="color:#e6db74">&#34;--runtime=nodejs10&#34;</span>,
+                        <span style="color:#e6db74">&#34;--memory=128MB&#34;</span>,
+                        <span style="color:#e6db74">&#34;--region=us-central1&#34;</span>,
+                        <span style="color:#e6db74">&#34;--trigger-http&#34;</span>
+                    ]
+                }
+            ]
+        }
+    });
+};
+</code></pre></div><p><a href="https://googleapis.dev/nodejs/cloudbuild/latest/v1.CloudBuildClient.html#createBuild">createBuild</a>というメソッドで、任意のオプションからCloud Buildを起動させます。
+このリクエスト内ではリポジトリだけでなくCloud Storageを指定することでき、今回やりたかったことが達成できます。</p>
+<p>また、リクエストにプロジェクトIDを含める必要があります。
+Node.js 8系までは <code>GCP_PROJECT</code> という環境変数で取得できたようですが、Node.js 10系では取得できなくなったようです。</p>
+<p><a href="https://cloud.google.com/functions/docs/env-var#environment_variables_set_automatically">環境変数の使用 | Google Cloud Functions に関するドキュメント</a></p>
+<p>仕方ないので、デプロイ時のコマンドラインで指定することにしました。
+以下のコマンドでbuild-funcをデプロイします。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">gcloud functions deploy build-func <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>  --entry-point<span style="color:#f92672">=</span>build <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>  --runtime<span style="color:#f92672">=</span>nodejs10 <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>  --memory<span style="color:#f92672">=</span>256MB <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>  --region<span style="color:#f92672">=</span>us-central1 <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>  --trigger-bucket<span style="color:#f92672">=</span>src-func <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>  --set-env-vars GCP_PRJECT_ID<span style="color:#f92672">={</span>GCPプロジェクト名<span style="color:#f92672">}</span>
+</code></pre></div><p><code>--trigger-bucket</code>には、デプロイしたいファイルを置くバケットを指定します。</p>
+<h2 id="cloud-buildの権限設定">Cloud Buildの権限設定</h2>
+<p>Cloud Buildを使って対象を初めてデプロイする場合、権限設定が必要です。
+今回はCloud Functionsをデプロイするのでその開発者と、サービスアカウントユーザーが必要なので付与します。</p>
+<p><img src="/images/cloud-build-settings.png" alt="Cloud Buildの権限設定"></p>
+<h2 id="動作確認">動作確認</h2>
+<p>準備が整ったところで、Storageの対象バケットにアップロードしてみます。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">gsutil cp hello-func.tar.gz gs://src-func/hello-func.tar.gz
+</code></pre></div><p>このように、正常hello-funcがデプロイされました。</p>
+<p><img src="/images/result-hello-func.png" alt="Functionsの結果"></p>
+<h2 id="まとめ">まとめ</h2>
+<p>ちょっと面倒ではありますが、ちょっと工夫するだけで実現できたので良かったです。
+こんな感じで、トリガーに設定できなくてもAPIが存在すればFunctionsでなんとかなるってことは他にもあるかもですね。</p>
+
+</div>
+
+  
+<footer class='entry-footer'>
+  <div class='container sep-before'><div class='categories'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M22,19a2,2,0,0,1-2,2H4a2,2,0,0,1-2-2V5A2,2,0,0,1,4,3H9l2,3h9a2,2,0,0,1,2,2Z"/>
+  
+</svg>
+<span class='screen-reader-text'>Categories: </span><a class='category' href='/categories/tech/'>tech</a></div>
+<div class='tags'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M20.59,13.41l-7.17,7.17a2,2,0,0,1-2.83,0L2,12V2H12l8.59,8.59A2,2,0,0,1,20.59,13.41Z"/>
+  <line x1="7" y1="7" x2="7" y2="7"/>
+  
+</svg>
+<span class='screen-reader-text'>Tags: </span><a class='tag' href='/tags/gcp/'>GCP</a>, <a class='tag' href='/tags/cloud-functions/'>Cloud Functions</a>, <a class='tag' href='/tags/cloud-build/'>Cloud Build</a>, <a class='tag' href='/tags/cloud-storage/'>Cloud Storage</a>, , <a class='tag' href='/tags/javascript/'>JavaScript</a></div>
+
+  </div>
+</footer>
+
+
+</article>
+
+<nav class='entry-nav'>
+  <div class='container'><div class='prev-entry sep-before'>
+      <a href='/post/javascript-enlightenment/'>
+        <span aria-hidden='true'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="20" y1="12" x2="4" y2="12"/>
+  <polyline points="10 18 4 12 10 6"/>
+  
+</svg>
+ Previous</span>
+        <span class='screen-reader-text'>Previous post: </span>『開眼! JavaScript』読んだ</a>
+    </div></div>
+</nav>
+
+
+
+
+      </main>
+
+      <footer id='footer' class='footer'>
+        <div class='container sep-before'><div class='copyright'>
+  <p>© abekoh</p>
+</div>
+
+        </div>
+      </footer>
+
+    </div>
+  </div><script>window.__assets_js_src="/assets/js/"</script>
+
+<script src='https://blog.abekoh.dev/assets/js/main.67d669ac.js'></script>
+
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

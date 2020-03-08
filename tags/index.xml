@@ -6,15 +6,51 @@
     <description>Recent content in Tags on abekoh&#39;s tech note</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>© abekoh</copyright>
-    <lastBuildDate>Sun, 23 Feb 2020 18:20:11 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 08 Mar 2020 23:30:00 +0900</lastBuildDate>
     
 	<atom:link href="https://blog.abekoh.dev/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Cloud Build</title>
+      <link>https://blog.abekoh.dev/tags/cloud-build/</link>
+      <pubDate>Sun, 08 Mar 2020 23:30:00 +0900</pubDate>
+      
+      <guid>https://blog.abekoh.dev/tags/cloud-build/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Cloud Functions</title>
+      <link>https://blog.abekoh.dev/tags/cloud-functions/</link>
+      <pubDate>Sun, 08 Mar 2020 23:30:00 +0900</pubDate>
+      
+      <guid>https://blog.abekoh.dev/tags/cloud-functions/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Cloud Storage</title>
+      <link>https://blog.abekoh.dev/tags/cloud-storage/</link>
+      <pubDate>Sun, 08 Mar 2020 23:30:00 +0900</pubDate>
+      
+      <guid>https://blog.abekoh.dev/tags/cloud-storage/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>GCP</title>
+      <link>https://blog.abekoh.dev/tags/gcp/</link>
+      <pubDate>Sun, 08 Mar 2020 23:30:00 +0900</pubDate>
+      
+      <guid>https://blog.abekoh.dev/tags/gcp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Java</title>
       <link>https://blog.abekoh.dev/tags/java/</link>
-      <pubDate>Sun, 23 Feb 2020 18:20:11 +0900</pubDate>
+      <pubDate>Sun, 08 Mar 2020 23:30:00 +0900</pubDate>
       
       <guid>https://blog.abekoh.dev/tags/java/</guid>
       <description></description>
@@ -23,9 +59,18 @@
     <item>
       <title>JavaScript</title>
       <link>https://blog.abekoh.dev/tags/javascript/</link>
-      <pubDate>Sun, 23 Feb 2020 18:20:11 +0900</pubDate>
+      <pubDate>Sun, 08 Mar 2020 23:30:00 +0900</pubDate>
       
       <guid>https://blog.abekoh.dev/tags/javascript/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Node.js</title>
+      <link>https://blog.abekoh.dev/tags/node.js/</link>
+      <pubDate>Sun, 08 Mar 2020 23:30:00 +0900</pubDate>
+      
+      <guid>https://blog.abekoh.dev/tags/node.js/</guid>
       <description></description>
     </item>
     
