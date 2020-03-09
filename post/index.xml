@@ -17,11 +17,11 @@
       <pubDate>Sun, 08 Mar 2020 23:30:00 +0900</pubDate>
       
       <guid>https://blog.abekoh.dev/post/gcp-deploy-functions-from-storage/</guid>
-      <description>GCPサービスの1つ、Cloud BuildはいわゆるCI/CDツールです。 GithubなどGitレポジトリに紐づけてトリガーさせて使うのが普通だと思います。トリガーとしても現状、リポジトリ経由しか選択できません。
+      <description>GCPサービスの1つ、Cloud BuildはいわゆるCI/CDツールです。 GithubなどGitレポジトリに紐づけてトリガーさせて使うのが普通だと思います。UIから設定できるトリガーとしても現状、リポジトリ経由しか選択できません。
 しかし、業務のある都合でCloud Storage経由でデプロイしたいことがありまして。 やり方を模索してみてうまくいったので、メモっておきます。
-ソース 今回使ったものすべてこちらに置いてます。
+ソース こちらに置いてます。
 abekoh/gcp-deploy-from-storage
-全体像 今回はhello-funcというファンクションを、tar.gzに圧縮したソースからCloud Functionsにデプロイするというシナリオとします。 デプロイ対象はApp Engineとか、別のサービスでもいけると思います。
+全体像 今回はhello-funcというファンクションを、tar.gzに圧縮したソースからCloud Functionsにデプロイするというシナリオとします。 デプロイ対象はApp Engineとか、別のサービスでもいけるはず。
 デプロイ対象 シンプルにHTTPリクエストおくるとHelloが返ってくるFunctionです。Node.jsで書きます。
 // index.js exports.hello = (req, res) =&amp;gt; { res.send(&amp;#39;Hello, world!&amp;#39;); } これと、npm initで生成したpackage.jsonを含んだhello-func.tar.gzを作っておきます。
 tar zcvf hello-func.tar.gz index.js package.json ビルドファンクション実装 メインとなるビルド用ファンクションです。

@@ -2,11 +2,11 @@
 <html lang='en'><head>
   <meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'>
-<meta name='description' content='GCPサービスの1つ、Cloud BuildはいわゆるCI/CDツールです。 GithubなどGitレポジトリに紐づけてトリガーさせて使うのが普通だと思います。トリガーとしても現状、リポジトリ経由しか選択できません。
+<meta name='description' content='GCPサービスの1つ、Cloud BuildはいわゆるCI/CDツールです。 GithubなどGitレポジトリに紐づけてトリガーさせて使うのが普通だと思います。UIから設定できるトリガーとしても現状、リポジトリ経由しか選択できません。
 しかし、業務のある都合でCloud Storage経由でデプロイしたいことがありまして。 やり方を模索してみてうまくいったので、メモっておきます。
-ソース 今回使ったものすべてこちらに置いてます。
+ソース こちらに置いてます。
 abekoh/gcp-deploy-from-storage
-全体像 今回はhello-funcというファンクションを、tar.gzに圧縮したソースからCloud Functionsにデプロイするというシナリオとします。 デプロイ対象はApp Engineとか、別のサービスでもいけると思います。
+全体像 今回はhello-funcというファンクションを、tar.gzに圧縮したソースからCloud Functionsにデプロイするというシナリオとします。 デプロイ対象はApp Engineとか、別のサービスでもいけるはず。
 デプロイ対象 シンプルにHTTPリクエストおくるとHelloが返ってくるFunctionです。Node.jsで書きます。
 // index.js exports.hello = (req, res) =&gt; { res.send(&#39;Hello, world!&#39;); } これと、npm initで生成したpackage.jsonを含んだhello-func.tar.gzを作っておきます。
 tar zcvf hello-func.tar.gz index.js package.json ビルドファンクション実装 メインとなるビルド用ファンクションです。
@@ -21,11 +21,11 @@ npm init npm i -S @google-cloud/cloudbuild ビルド用Functionsの実装はこ�
 <meta name='theme-color' content='#44ccff'>
 
 <meta property='og:title' content='Cloud Storage経由でCloud Buildを動かしてデプロイする • abekoh&#39;s tech note'>
-<meta property='og:description' content='GCPサービスの1つ、Cloud BuildはいわゆるCI/CDツールです。 GithubなどGitレポジトリに紐づけてトリガーさせて使うのが普通だと思います。トリガーとしても現状、リポジトリ経由しか選択できません。
+<meta property='og:description' content='GCPサービスの1つ、Cloud BuildはいわゆるCI/CDツールです。 GithubなどGitレポジトリに紐づけてトリガーさせて使うのが普通だと思います。UIから設定できるトリガーとしても現状、リポジトリ経由しか選択できません。
 しかし、業務のある都合でCloud Storage経由でデプロイしたいことがありまして。 やり方を模索してみてうまくいったので、メモっておきます。
-ソース 今回使ったものすべてこちらに置いてます。
+ソース こちらに置いてます。
 abekoh/gcp-deploy-from-storage
-全体像 今回はhello-funcというファンクションを、tar.gzに圧縮したソースからCloud Functionsにデプロイするというシナリオとします。 デプロイ対象はApp Engineとか、別のサービスでもいけると思います。
+全体像 今回はhello-funcというファンクションを、tar.gzに圧縮したソースからCloud Functionsにデプロイするというシナリオとします。 デプロイ対象はApp Engineとか、別のサービスでもいけるはず。
 デプロイ対象 シンプルにHTTPリクエストおくるとHelloが返ってくるFunctionです。Node.jsで書きます。
 // index.js exports.hello = (req, res) =&gt; { res.send(&#39;Hello, world!&#39;); } これと、npm initで生成したpackage.jsonを含んだhello-func.tar.gzを作っておきます。
 tar zcvf hello-func.tar.gz index.js package.json ビルドファンクション実装 メインとなるビルド用ファンクションです。
@@ -270,16 +270,16 @@ One min read
 
   <div class='container entry-content'>
   <p>GCPサービスの1つ、<a href="https://cloud.google.com/cloud-build">Cloud Build</a>はいわゆるCI/CDツールです。
-GithubなどGitレポジトリに紐づけてトリガーさせて使うのが普通だと思います。トリガーとしても現状、リポジトリ経由しか選択できません。</p>
+GithubなどGitレポジトリに紐づけてトリガーさせて使うのが普通だと思います。UIから設定できるトリガーとしても現状、リポジトリ経由しか選択できません。</p>
 <p>しかし、業務のある都合で<a href="https://cloud.google.com/storage">Cloud Storage</a>経由でデプロイしたいことがありまして。
 やり方を模索してみてうまくいったので、メモっておきます。</p>
 <h2 id="ソース">ソース</h2>
-<p>今回使ったものすべてこちらに置いてます。</p>
+<p>こちらに置いてます。</p>
 <p><a href="https://github.com/abekoh/gcp-deploy-from-storage">abekoh/gcp-deploy-from-storage</a></p>
 <h2 id="全体像">全体像</h2>
 <p><img src="/images/gcp-deploy-functions-from-storage.svg" alt="全体像"></p>
 <p>今回はhello-funcというファンクションを、tar.gzに圧縮したソースからCloud Functionsにデプロイするというシナリオとします。
-デプロイ対象はApp Engineとか、別のサービスでもいけると思います。</p>
+デプロイ対象はApp Engineとか、別のサービスでもいけるはず。</p>
 <h2 id="デプロイ対象">デプロイ対象</h2>
 <p>シンプルにHTTPリクエストおくるとHelloが返ってくるFunctionです。Node.jsで書きます。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">// index.js
@@ -340,7 +340,7 @@ npm i -S @google-cloud/cloudbuild
     });
 };
 </code></pre></div><p><a href="https://googleapis.dev/nodejs/cloudbuild/latest/v1.CloudBuildClient.html#createBuild">createBuild</a>というメソッドで、任意のオプションからCloud Buildを起動させます。
-このリクエスト内ではリポジトリだけでなくCloud Storageを指定することでき、今回やりたかったことが達成できます。</p>
+このリクエストではリポジトリだけでなくCloud Storageを指定することでき、今回やりたかったことが達成できます。</p>
 <p>また、リクエストにプロジェクトIDを含める必要があります。
 Node.js 8系までは <code>GCP_PROJECT</code> という環境変数で取得できたようですが、Node.js 10系では取得できなくなったようです。</p>
 <p><a href="https://cloud.google.com/functions/docs/env-var#environment_variables_set_automatically">環境変数の使用 | Google Cloud Functions に関するドキュメント</a></p>
@@ -352,7 +352,7 @@ Node.js 8系までは <code>GCP_PROJECT</code> という環境変数で取得で
 </span><span style="color:#ae81ff"></span>  --memory<span style="color:#f92672">=</span>256MB <span style="color:#ae81ff">\
 </span><span style="color:#ae81ff"></span>  --region<span style="color:#f92672">=</span>us-central1 <span style="color:#ae81ff">\
 </span><span style="color:#ae81ff"></span>  --trigger-bucket<span style="color:#f92672">=</span>src-func <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>  --set-env-vars GCP_PRJECT_ID<span style="color:#f92672">={</span>GCPプロジェクト名<span style="color:#f92672">}</span>
+</span><span style="color:#ae81ff"></span>  --set-env-vars GCP_PROJECT_ID<span style="color:#f92672">={</span>GCPプロジェクト名<span style="color:#f92672">}</span>
 </code></pre></div><p><code>--trigger-bucket</code>には、デプロイしたいファイルを置くバケットを指定します。</p>
 <h2 id="cloud-buildの権限設定">Cloud Buildの権限設定</h2>
 <p>Cloud Buildを使って対象を初めてデプロイする場合、権限設定が必要です。
