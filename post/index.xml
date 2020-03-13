@@ -6,10 +6,29 @@
     <description>Recent content in Posts on abekoh&#39;s tech note</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>© abekoh</copyright>
-    <lastBuildDate>Sun, 08 Mar 2020 23:30:00 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 13 Mar 2020 23:29:56 +0900</lastBuildDate>
     
 	<atom:link href="https://blog.abekoh.dev/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>fish,tmux,neovim,ghq,pecoで開発スペース構築を快適にする</title>
+      <link>https://blog.abekoh.dev/post/prj-command/</link>
+      <pubDate>Fri, 13 Mar 2020 23:29:56 +0900</pubDate>
+      
+      <guid>https://blog.abekoh.dev/post/prj-command/</guid>
+      <description>ちょっとしたコード編集とかだったらターミナル上だけで完結させるのが好きでして。 効率よくプロジェクト選択、そのまま編集したりしやすくなる prj というコマンドを自作しています。 また、これに加えて使いやすいように他にも設定盛り込んでます。
+なんだかんだ1年以上運用していて、満足しているのでアウトプットしておきます。
+環境 次のような環境が必要です
+ Neovim  neovim-remote   tmux fish peco  Neovim,tmuxは必須ですが、fish,pecoはzsh,fzfに書き換えても良いと思います。 インストール方法はそれぞれリンク先を参照してください。
+デモ わかりにくいかもですが、次のような特徴をみせてます。
+ prjで、ghqにより管理されたgitリポジトリをpecoをつかって選択 リポジトリを選択するとそのプロジェクト用のtmuxセッションが開かれ、カレントディレクトリがそのリポジトリ配下になる tmuxセッション内で、Neovimは1タブでしか開けない tmuxセッション内でもう一度prjを実行すると、別のプロジェクトも開ける  次の項でその実現方法を解説します。
+解説 prjコマンド ghqとpecoの連携についてはこちらの記事の考えをそのまま使っています。
+ghq, peco, hubで快適Gitライフを手に入れよう！ - Qiita
+この組み合わせによって、レポジトリ管理・選択が劇的に楽になります。 さらに小細工を入れてtmuxセッションを開くようにしました。
+prjコマンドはfish scriptで書いています。こんな感じ
+# prj.fish function prj -d &amp;#34;start project&amp;#34; # 引数が設定されていれば、それをpecoにわたす  if test (count $argv) -gt 0 set prjflag --query &amp;#34;$argv&amp;#34; end set PRJ_PATH (ghq root)/(ghq list | peco $prjflag) # プロジェクトが選択されなければ終了  if test -z $PRJ_PATH return end # プロジェクト名は 所有者/リポジトリ名 の形式。その名前に`.</description>
+    </item>
     
     <item>
       <title>Cloud Storage経由でCloud Buildを動かしてデプロイする</title>
