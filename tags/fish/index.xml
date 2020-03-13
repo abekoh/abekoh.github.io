@@ -6,7 +6,7 @@
     <description>Recent content in fish on abekoh&#39;s tech note</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>© abekoh</copyright>
-    <lastBuildDate>Fri, 13 Mar 2020 23:29:56 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 14 Mar 2020 01:43:00 +0900</lastBuildDate>
     
 	<atom:link href="https://blog.abekoh.dev/tags/fish/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>fish,tmux,neovim,ghq,pecoで開発スペース構築を快適にする</title>
       <link>https://blog.abekoh.dev/post/prj-command/</link>
-      <pubDate>Fri, 13 Mar 2020 23:29:56 +0900</pubDate>
+      <pubDate>Sat, 14 Mar 2020 01:43:00 +0900</pubDate>
       
       <guid>https://blog.abekoh.dev/post/prj-command/</guid>
       <description>ちょっとしたコード編集とかだったらターミナル上だけで完結させるのが好きでして。 効率よくプロジェクト選択、そのまま編集したりしやすくなる prj というコマンドを自作しています。 また、これに加えて使いやすいように他にも設定盛り込んでます。
