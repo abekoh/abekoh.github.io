@@ -72,7 +72,7 @@ thisはそれを呼び出すタイミングで指すものが決まる var foo =
 定義時の&amp;rsquo;foo&#39;が常に出ると予想されるかもだが、実際は実行時のコンテキストに依存する。
 無名関数の即時実行 (function(){ console.log(&amp;#39;hoge&amp;#39;); })() functionの中身を即実行する書き方。 何度かこんなコードみたことあったのに、意味理解できていなかった。。
 関数の巻き上げ function後ろのほうで定義、前のほうで実行でも問題なし。
-foo() // -&amp;gt; hoge function foo() { console.</description>
+foo(); // -&amp;gt; hoge function foo() { console.</description>
     </item>
     
     <item>
