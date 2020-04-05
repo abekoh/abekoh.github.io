@@ -6,10 +6,55 @@
     <description>Recent content in Tags on abekoh&#39;s tech note</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>© 2019 abekoh</copyright>
-    <lastBuildDate>Sat, 14 Mar 2020 01:43:00 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 05 Apr 2020 23:43:00 +0900</lastBuildDate>
     
 	<atom:link href="https://blog.abekoh.dev/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Go</title>
+      <link>https://blog.abekoh.dev/tags/go/</link>
+      <pubDate>Sun, 05 Apr 2020 23:43:00 +0900</pubDate>
+      
+      <guid>https://blog.abekoh.dev/tags/go/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Google Maps</title>
+      <link>https://blog.abekoh.dev/tags/google-maps/</link>
+      <pubDate>Sun, 05 Apr 2020 23:43:00 +0900</pubDate>
+      
+      <guid>https://blog.abekoh.dev/tags/google-maps/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Java</title>
+      <link>https://blog.abekoh.dev/tags/java/</link>
+      <pubDate>Sun, 05 Apr 2020 23:43:00 +0900</pubDate>
+      
+      <guid>https://blog.abekoh.dev/tags/java/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Kotlin</title>
+      <link>https://blog.abekoh.dev/tags/kotlin/</link>
+      <pubDate>Sun, 05 Apr 2020 23:43:00 +0900</pubDate>
+      
+      <guid>https://blog.abekoh.dev/tags/kotlin/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Spring</title>
+      <link>https://blog.abekoh.dev/tags/spring/</link>
+      <pubDate>Sun, 05 Apr 2020 23:43:00 +0900</pubDate>
+      
+      <guid>https://blog.abekoh.dev/tags/spring/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>fish</title>
@@ -93,15 +138,6 @@
     </item>
     
     <item>
-      <title>Java</title>
-      <link>https://blog.abekoh.dev/tags/java/</link>
-      <pubDate>Sun, 08 Mar 2020 23:30:00 +0900</pubDate>
-      
-      <guid>https://blog.abekoh.dev/tags/java/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>JavaScript</title>
       <link>https://blog.abekoh.dev/tags/javascript/</link>
       <pubDate>Sun, 08 Mar 2020 23:30:00 +0900</pubDate>
@@ -129,29 +165,11 @@
     </item>
     
     <item>
-      <title>Spring</title>
-      <link>https://blog.abekoh.dev/tags/spring/</link>
-      <pubDate>Mon, 30 Dec 2019 02:05:02 +0900</pubDate>
-      
-      <guid>https://blog.abekoh.dev/tags/spring/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>勉強会</title>
       <link>https://blog.abekoh.dev/tags/%E5%8B%89%E5%BC%B7%E4%BC%9A/</link>
       <pubDate>Mon, 30 Dec 2019 02:05:02 +0900</pubDate>
       
       <guid>https://blog.abekoh.dev/tags/%E5%8B%89%E5%BC%B7%E4%BC%9A/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Go</title>
-      <link>https://blog.abekoh.dev/tags/go/</link>
-      <pubDate>Sat, 21 Dec 2019 13:52:48 +0900</pubDate>
-      
-      <guid>https://blog.abekoh.dev/tags/go/</guid>
       <description></description>
     </item>
     
