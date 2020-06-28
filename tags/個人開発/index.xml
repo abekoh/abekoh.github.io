@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>個人開発 on abekoh&#39;s tech note</title>
+    <link>https://blog.abekoh.dev/tags/%E5%80%8B%E4%BA%BA%E9%96%8B%E7%99%BA/</link>
+    <description>Recent content in 個人開発 on abekoh&#39;s tech note</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>© 2019 abekoh</copyright>
+    <lastBuildDate>Sun, 28 Jun 2020 15:08:00 +0900</lastBuildDate>
+    
+	<atom:link href="https://blog.abekoh.dev/tags/%E5%80%8B%E4%BA%BA%E9%96%8B%E7%99%BA/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>あつ森のアイテムカタログサービスつくった、けれど公開はやめた話</title>
+      <link>https://blog.abekoh.dev/post/atsumori-app/</link>
+      <pubDate>Sun, 28 Jun 2020 15:08:00 +0900</pubDate>
+      
+      <guid>https://blog.abekoh.dev/post/atsumori-app/</guid>
+      <description>3月ごろからあつ森にハマり、それから自粛期間に入りまして。 お家時間増えたし何か個人開発したい！と思い、思いついたのが「あつ森のアイテムをWeb上でらくらくに検索したりできるサービス」でした。
+1ヶ月くらいかけてコツコツと作りあげたものの、公開しよう！ってタイミングで結局諦めることにしました。 実際どんなもの作ったか、公開やめた理由、どんな学びがあったのか、成仏のためにも記事にしようと思います。
+どんなサービス？ あつ森に出てくる家具、服などのアイテムを簡単に検索でき、そのバリエーションや入手方法などをチェックすることができます。
+デモはこちら。 左側のメニューから、キーワード検索でアイテムを探すことができます。しぼりこみ検索では「ジョニーからもらえる家具」といった条件で検索ができます。 またマイリスト機能もつけていまして、ログインしていたら欲しい物を管理、公開することが可能になってます。
+レスポンシブなので、スマホにも対応しています。 なぜ公開をやめたか やっぱり著作権的にアウトだと判断し、お蔵入りにすることにしました。
+多くのあつ森攻略サイトで家具一覧ページが存在していたり、某ポケモン攻略サイトが公式からOKもらっていたりと前例があるので、 1ファンサイトとして公開してもいいかなと思ってましたが…
+ 公式の画像バリバリ使ってしまってる点は、二次利用として「常識の範囲」を超えている点 「ゲーム買わなくてもこれ見たら満足してしまう」という不利益を与えてしまう可能性がある点  など、不安が残る点がクリアにできず。 個人的には任天堂の大ファンなので、変に迷惑かけるのも嫌でして。あくまで個人範囲で楽しむものまでに留めることにしました。
+学びなど 諦めたものの、Webアプリをしっかり個人開発したのが初だったので多くの学びがありました。 その学びを備忘録的にメモしておこうと思います。
+今回つかった技術まわりは次の通りです。
+ フロント  Nuxt.js  SPAモード not TypeScript   Vuetify   データまわり  Python (アイテムデータの収集、整形、DB登録など)   インフラ  Firebase  Authentication Cloud Firestore Hosting (Functions)   Algolia (全文検索エンジン)    以下、感想など
+Vuetifyがつよい Vue Material Design Component Framework — Vuetify.js
+デザインフレームワークとして今回Vuetifyを選んだのですが、強力すぎてビビりました。 CSSを全く書くことなく、HTMLテンプレ書くだけでいい感じの見た目になります。</description>
+    </item>
+    
+  </channel>
+</rss>

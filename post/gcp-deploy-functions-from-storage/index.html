@@ -41,7 +41,7 @@ npm init npm i -S @google-cloud/cloudbuild ビルド用Functionsの実装はこ�
 <meta property='og:site_name' content='abekoh&#39;s tech note'>
 <meta property='og:type' content='article'><meta property='article:section' content='post'><meta property='article:tag' content='GCP'><meta property='article:tag' content='Cloud Functions'><meta property='article:tag' content='Cloud Build'><meta property='article:tag' content='Cloud Storage'><meta property='article:tag' content='Node.js'><meta property='article:tag' content='JavaScript'><meta property='article:published_time' content='2020-03-08T23:30:00&#43;09:00'/><meta property='article:modified_time' content='2020-03-08T23:30:00&#43;09:00'/><meta name='twitter:card' content='summary'>
 
-<meta name="generator" content="Hugo 0.69.2" />
+<meta name="generator" content="Hugo 0.73.0" />
 
   <title>Cloud Storage経由でCloud Buildを動かしてデプロイする • abekoh&#39;s tech note</title>
   <link rel='canonical' href='https://blog.abekoh.dev/post/gcp-deploy-functions-from-storage/'>
@@ -141,6 +141,8 @@ if (!doNotTrack) {
       </li><li>
         <a href='/tags/diary/' style='font-size:1em'>diary</a>
       </li><li>
+        <a href='/tags/firebase/' style='font-size:1em'>Firebase</a>
+      </li><li>
         <a href='/tags/fish/' style='font-size:1em'>fish</a>
       </li><li>
         <a href='/tags/gcp/' style='font-size:1em'>GCP</a>
@@ -157,15 +159,17 @@ if (!doNotTrack) {
       </li><li>
         <a href='/tags/hugo/' style='font-size:1em'>Hugo</a>
       </li><li>
-        <a href='/tags/java/' style='font-size:2em'>Java</a>
+        <a href='/tags/java/' style='font-size:1.5em'>Java</a>
       </li><li>
-        <a href='/tags/javascript/' style='font-size:2em'>JavaScript</a>
+        <a href='/tags/javascript/' style='font-size:2em'>Javascript</a>
       </li><li>
         <a href='/tags/kotlin/' style='font-size:1em'>Kotlin</a>
       </li><li>
-        <a href='/tags/neovim/' style='font-size:2em'>Neovim</a>
+        <a href='/tags/neovim/' style='font-size:1.5em'>Neovim</a>
       </li><li>
         <a href='/tags/node.js/' style='font-size:1em'>Node.js</a>
+      </li><li>
+        <a href='/tags/nuxt.js/' style='font-size:1em'>Nuxt.js</a>
       </li><li>
         <a href='/tags/qiita/' style='font-size:1em'>Qiita</a>
       </li><li>
@@ -173,11 +177,15 @@ if (!doNotTrack) {
       </li><li>
         <a href='/tags/slack/' style='font-size:1em'>Slack</a>
       </li><li>
-        <a href='/tags/spring/' style='font-size:2em'>Spring</a>
+        <a href='/tags/spring/' style='font-size:1.5em'>Spring</a>
       </li><li>
         <a href='/tags/tmux/' style='font-size:1em'>tmux</a>
       </li><li>
-        <a href='/tags/vim/' style='font-size:2em'>Vim</a>
+        <a href='/tags/vim/' style='font-size:1.5em'>Vim</a>
+      </li><li>
+        <a href='/tags/vue.js/' style='font-size:1em'>Vue.js</a>
+      </li><li>
+        <a href='/tags/%E5%80%8B%E4%BA%BA%E9%96%8B%E7%99%BA/' style='font-size:1em'>個人開発</a>
       </li><li>
         <a href='/tags/%E5%8B%89%E5%BC%B7%E4%BC%9A/' style='font-size:1em'>勉強会</a>
       </li><li>
@@ -393,7 +401,7 @@ Node.js 8系までは <code>GCP_PROJECT</code> という環境変数で取得で
   <line x1="7" y1="7" x2="7" y2="7"/>
   
 </svg>
-<span class='screen-reader-text'>Tags: </span><a class='tag' href='/tags/gcp/'>GCP</a>, <a class='tag' href='/tags/cloud-functions/'>Cloud Functions</a>, <a class='tag' href='/tags/cloud-build/'>Cloud Build</a>, <a class='tag' href='/tags/cloud-storage/'>Cloud Storage</a>, , <a class='tag' href='/tags/javascript/'>JavaScript</a></div>
+<span class='screen-reader-text'>Tags: </span><a class='tag' href='/tags/gcp/'>GCP</a>, <a class='tag' href='/tags/cloud-functions/'>Cloud Functions</a>, <a class='tag' href='/tags/cloud-build/'>Cloud Build</a>, <a class='tag' href='/tags/cloud-storage/'>Cloud Storage</a>, , <a class='tag' href='/tags/javascript/'>Javascript</a></div>
 
   </div>
 </footer>
