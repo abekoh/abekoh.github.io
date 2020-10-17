@@ -4,12 +4,37 @@
   
   <url>
     <loc>https://blog.abekoh.dev/</loc>
-    <lastmod>2020-06-28T15:08:00+09:00</lastmod>
+    <lastmod>2020-10-18T02:58:00+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://blog.abekoh.dev/categories/</loc>
-    <lastmod>2020-06-28T15:08:00+09:00</lastmod>
+    <lastmod>2020-10-18T02:58:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.abekoh.dev/tags/ddd/</loc>
+    <lastmod>2020-10-18T02:58:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.abekoh.dev/post/</loc>
+    <lastmod>2020-10-18T02:58:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.abekoh.dev/tags/</loc>
+    <lastmod>2020-10-18T02:58:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.abekoh.dev/categories/tech/</loc>
+    <lastmod>2020-10-18T02:58:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.abekoh.dev/post/ddd-books/</loc>
+    <lastmod>2020-10-18T02:58:00+09:00</lastmod>
   </url>
   
   <url>
@@ -24,21 +49,6 @@
   
   <url>
     <loc>https://blog.abekoh.dev/tags/nuxt.js/</loc>
-    <lastmod>2020-06-28T15:08:00+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.abekoh.dev/post/</loc>
-    <lastmod>2020-06-28T15:08:00+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.abekoh.dev/tags/</loc>
-    <lastmod>2020-06-28T15:08:00+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.abekoh.dev/categories/tech/</loc>
     <lastmod>2020-06-28T15:08:00+09:00</lastmod>
   </url>
   
