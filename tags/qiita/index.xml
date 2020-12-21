@@ -6,7 +6,17 @@
     <description>Recent content in Qiita on abekoh&#39;s tech note</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>© 2019 abekoh</copyright>
-    <lastBuildDate>Wed, 11 Dec 2019 23:52:09 +0900</lastBuildDate><atom:link href="https://blog.abekoh.dev/tags/qiita/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 21 Dec 2020 20:39:03 +0900</lastBuildDate><atom:link href="https://blog.abekoh.dev/tags/qiita/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[Qiita] トランザクションスクリプトなシステムをもとに、Cleanなシステムを構築する</title>
+      <link>https://blog.abekoh.dev/post/advent-calendar-2020-ddd/</link>
+      <pubDate>Mon, 21 Dec 2020 20:39:03 +0900</pubDate>
+      
+      <guid>https://blog.abekoh.dev/post/advent-calendar-2020-ddd/</guid>
+      <description>ドメイン駆動設計 Advent Calendar 2020 に参加しました。
+トランザクションスクリプトなシステムをもとに、Cleanなシステムを構築する - Qiita</description>
+    </item>
+    
     <item>
       <title>[Qiita] Slackでスニペットを共有するためのVimプラグインつくってみた</title>
       <link>https://blog.abekoh.dev/post/qiita-snipslack-vim/</link>
