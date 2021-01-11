@@ -6,7 +6,11 @@
     <description>Recent content in Cloud Storage on abekoh&#39;s tech note</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>© 2019 abekoh</copyright>
-    <lastBuildDate>Sun, 08 Mar 2020 23:30:00 +0900</lastBuildDate><atom:link href="https://blog.abekoh.dev/tags/cloud-storage/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 08 Mar 2020 23:30:00 +0900</lastBuildDate>
+    
+	<atom:link href="https://blog.abekoh.dev/tags/cloud-storage/index.xml" rel="self" type="application/rss+xml" />
+    
+    
     <item>
       <title>Cloud Storage経由でCloud Buildを動かしてデプロイする</title>
       <link>https://blog.abekoh.dev/post/gcp-deploy-functions-from-storage/</link>

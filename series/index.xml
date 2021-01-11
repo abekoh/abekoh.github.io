@@ -5,6 +5,10 @@
     <link>https://blog.abekoh.dev/series/</link>
     <description>Recent content in Series on abekoh&#39;s tech note</description>
     <generator>Hugo -- gohugo.io</generator>
-    <copyright>© 2019 abekoh</copyright><atom:link href="https://blog.abekoh.dev/series/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>© 2019 abekoh</copyright>
+    
+	<atom:link href="https://blog.abekoh.dev/series/index.xml" rel="self" type="application/rss+xml" />
+    
+    
   </channel>
 </rss>

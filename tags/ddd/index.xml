@@ -6,7 +6,32 @@
     <description>Recent content in DDD on abekoh&#39;s tech note</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>© 2019 abekoh</copyright>
-    <lastBuildDate>Mon, 21 Dec 2020 20:39:03 +0900</lastBuildDate><atom:link href="https://blog.abekoh.dev/tags/ddd/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 11 Jan 2021 22:30:00 +0900</lastBuildDate>
+    
+	<atom:link href="https://blog.abekoh.dev/tags/ddd/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>GitHub Actions &#43; PlantUMLでドメインモデルの管理を楽にする</title>
+      <link>https://blog.abekoh.dev/post/plantuml-action/</link>
+      <pubDate>Mon, 11 Jan 2021 22:30:00 +0900</pubDate>
+      
+      <guid>https://blog.abekoh.dev/post/plantuml-action/</guid>
+      <description>ドメインモデルの図を複数人、エンジニア・ドメインエキスパート間で共有するにあたって、 やり方はいろいろ考えられますが、
+ 差分がわかりやすい バージョン管理ができる  という点からやはりGitで管理できると嬉しいと思います。
+Gitで管理しやすいフォーマットとして、DSLから図を自動生成してくれるPlantUMLが使いやすく定番です。 ドメインモデルについては下図のようにオブジェクト図で書けるとよいかと思います。
+(『実践ドメイン駆動設計』 P.356, 図10-7をもとに作成)
+このPlantUMLによるドメインモデルの管理をGitHubのPR上で効率行えるようにするための、Github Actionsのテンプレを開発しMarketplaceに公開しました。
+Generate and Commit PlantUML Diagrams · Actions · GitHub Marketplace
+使い方などはREADMEを参考に。使い勝手は以下のサンプルPRを見ていただければわかりやすいと思います。
+Example by abekoh · Pull Request #33 · abekoh/commit-plantuml-action
+.pumlファイルに差分が生じたとき、同じところに.pngとして画像が生成され、コミットされます。
+さらにenableReviewCommentを有効にすれば、生成された図のリンクとプレビューがコメントに投稿されます。 Beforeを展開して古い図との差分も確認可能です。
+毎回リンクをたどってレビューを行う必要がなく、使い勝手よく扱えると思います。
+注意点としては、PlantUMLが依存しているgraphvizの影響でライセンスがGPLとなっている点です…
+このあたりのPlantUMLの別実装を使ってより緩いライセンス使えないか、模索していきたいところ。</description>
+    </item>
+    
     <item>
       <title>[Qiita] トランザクションスクリプトなシステムをもとに、Cleanなシステムを構築する</title>
       <link>https://blog.abekoh.dev/post/advent-calendar-2020-ddd/</link>
