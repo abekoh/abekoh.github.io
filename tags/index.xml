@@ -6,13 +6,40 @@
     <description>Recent content in Tags on abekoh&#39;s tech note</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>© 2019 abekoh</copyright>
-    <lastBuildDate>Mon, 11 Jan 2021 22:30:00 +0900</lastBuildDate><atom:link href="https://blog.abekoh.dev/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 21 Feb 2021 14:30:00 +0900</lastBuildDate><atom:link href="https://blog.abekoh.dev/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>DDD</title>
       <link>https://blog.abekoh.dev/tags/ddd/</link>
-      <pubDate>Mon, 11 Jan 2021 22:30:00 +0900</pubDate>
+      <pubDate>Sun, 21 Feb 2021 14:30:00 +0900</pubDate>
       
       <guid>https://blog.abekoh.dev/tags/ddd/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>React.js</title>
+      <link>https://blog.abekoh.dev/tags/react.js/</link>
+      <pubDate>Sun, 21 Feb 2021 14:30:00 +0900</pubDate>
+      
+      <guid>https://blog.abekoh.dev/tags/react.js/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>アジャイル開発</title>
+      <link>https://blog.abekoh.dev/tags/%E3%82%A2%E3%82%B8%E3%83%A3%E3%82%A4%E3%83%AB%E9%96%8B%E7%99%BA/</link>
+      <pubDate>Sun, 21 Feb 2021 14:30:00 +0900</pubDate>
+      
+      <guid>https://blog.abekoh.dev/tags/%E3%82%A2%E3%82%B8%E3%83%A3%E3%82%A4%E3%83%AB%E9%96%8B%E7%99%BA/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>オブジェクト指向</title>
+      <link>https://blog.abekoh.dev/tags/%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E6%8C%87%E5%90%91/</link>
+      <pubDate>Sun, 21 Feb 2021 14:30:00 +0900</pubDate>
+      
+      <guid>https://blog.abekoh.dev/tags/%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E6%8C%87%E5%90%91/</guid>
       <description></description>
     </item>
     
