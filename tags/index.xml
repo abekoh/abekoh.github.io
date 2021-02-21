@@ -6,11 +6,7 @@
     <description>Recent content in Tags on abekoh&#39;s tech note</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>© 2019 abekoh</copyright>
-    <lastBuildDate>Mon, 11 Jan 2021 22:30:00 +0900</lastBuildDate>
-    
-	<atom:link href="https://blog.abekoh.dev/tags/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Mon, 11 Jan 2021 22:30:00 +0900</lastBuildDate><atom:link href="https://blog.abekoh.dev/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>DDD</title>
       <link>https://blog.abekoh.dev/tags/ddd/</link>
@@ -66,15 +62,6 @@
     </item>
     
     <item>
-      <title>Java</title>
-      <link>https://blog.abekoh.dev/tags/java/</link>
-      <pubDate>Sun, 28 Jun 2020 15:08:00 +0900</pubDate>
-      
-      <guid>https://blog.abekoh.dev/tags/java/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Javascript</title>
       <link>https://blog.abekoh.dev/tags/javascript/</link>
       <pubDate>Sun, 28 Jun 2020 15:08:00 +0900</pubDate>
@@ -111,20 +98,20 @@
     </item>
     
     <item>
-      <title>Go</title>
-      <link>https://blog.abekoh.dev/tags/go/</link>
-      <pubDate>Sun, 05 Apr 2020 23:43:00 +0900</pubDate>
-      
-      <guid>https://blog.abekoh.dev/tags/go/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Google Maps</title>
       <link>https://blog.abekoh.dev/tags/google-maps/</link>
       <pubDate>Sun, 05 Apr 2020 23:43:00 +0900</pubDate>
       
       <guid>https://blog.abekoh.dev/tags/google-maps/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Java</title>
+      <link>https://blog.abekoh.dev/tags/java/</link>
+      <pubDate>Sun, 05 Apr 2020 23:43:00 +0900</pubDate>
+      
+      <guid>https://blog.abekoh.dev/tags/java/</guid>
       <description></description>
     </item>
     
@@ -251,6 +238,15 @@
       <pubDate>Mon, 30 Dec 2019 02:05:02 +0900</pubDate>
       
       <guid>https://blog.abekoh.dev/tags/%E5%8B%89%E5%BC%B7%E4%BC%9A/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Go</title>
+      <link>https://blog.abekoh.dev/tags/go/</link>
+      <pubDate>Sat, 21 Dec 2019 13:52:48 +0900</pubDate>
+      
+      <guid>https://blog.abekoh.dev/tags/go/</guid>
       <description></description>
     </item>
     

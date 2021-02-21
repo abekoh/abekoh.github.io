@@ -41,7 +41,7 @@ npm init npm i -S @google-cloud/cloudbuild ビルド用Functionsの実装はこ�
 <meta property='og:site_name' content='abekoh&#39;s tech note'>
 <meta property='og:type' content='article'><meta property='article:section' content='post'><meta property='article:tag' content='GCP'><meta property='article:tag' content='Cloud Functions'><meta property='article:tag' content='Cloud Build'><meta property='article:tag' content='Cloud Storage'><meta property='article:tag' content='Node.js'><meta property='article:tag' content='JavaScript'><meta property='article:published_time' content='2020-03-08T23:30:00&#43;09:00'/><meta property='article:modified_time' content='2020-03-08T23:30:00&#43;09:00'/><meta name='twitter:card' content='summary'>
 
-<meta name="generator" content="Hugo 0.68.3" />
+<meta name="generator" content="Hugo 0.80.0" />
 
   <title>Cloud Storage経由でCloud Buildを動かしてデプロイする • abekoh&#39;s tech note</title>
   <link rel='canonical' href='https://blog.abekoh.dev/post/gcp-deploy-functions-from-storage/'>
@@ -329,7 +329,7 @@ npm i -S @google-cloud/cloudbuild
 </span><span style="color:#75715e"></span><span style="color:#e6db74">&#39;use strict&#39;</span>;
 <span style="color:#66d9ef">const</span> {<span style="color:#a6e22e">CloudBuildClient</span>} <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;@google-cloud/cloudbuild&#39;</span>);
 
-<span style="color:#a6e22e">exports</span>.<span style="color:#a6e22e">build</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">async</span> <span style="color:#a6e22e">file</span> =&gt; {
+<span style="color:#a6e22e">exports</span>.<span style="color:#a6e22e">build</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">async</span> <span style="color:#a6e22e">file</span> =&gt; {
     <span style="color:#75715e">// file.metageneration: メタ情報が更新されるとインクリメントされる値
 </span><span style="color:#75715e"></span>    <span style="color:#75715e">// ファイル自体が更新されるときは&#39;1&#39;となる
 </span><span style="color:#75715e"></span>    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">file</span>.<span style="color:#a6e22e">metageneration</span> <span style="color:#f92672">!==</span> <span style="color:#e6db74">&#39;1&#39;</span>) {

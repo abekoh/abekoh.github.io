@@ -6,11 +6,7 @@
     <description>Recent content in Categories on abekoh&#39;s tech note</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>© 2019 abekoh</copyright>
-    <lastBuildDate>Mon, 11 Jan 2021 22:30:00 +0900</lastBuildDate>
-    
-	<atom:link href="https://blog.abekoh.dev/categories/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Mon, 11 Jan 2021 22:30:00 +0900</lastBuildDate><atom:link href="https://blog.abekoh.dev/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>tech</title>
       <link>https://blog.abekoh.dev/categories/tech/</link>

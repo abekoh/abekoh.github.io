@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://blog.abekoh.dev/</loc>
+    <lastmod>2021-01-11T22:30:00+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://blog.abekoh.dev/categories/</loc>
     <lastmod>2021-01-11T22:30:00+09:00</lastmod>
   </url>
@@ -68,11 +73,6 @@
   </url>
   
   <url>
-    <loc>https://blog.abekoh.dev/tags/java/</loc>
-    <lastmod>2020-06-28T15:08:00+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://blog.abekoh.dev/tags/javascript/</loc>
     <lastmod>2020-06-28T15:08:00+09:00</lastmod>
   </url>
@@ -98,17 +98,17 @@
   </url>
   
   <url>
-    <loc>https://blog.abekoh.dev/tags/go/</loc>
-    <lastmod>2020-04-05T23:43:00+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://blog.abekoh.dev/tags/google-maps/</loc>
     <lastmod>2020-04-05T23:43:00+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://blog.abekoh.dev/post/google-maps-api-with-spring/</loc>
+    <lastmod>2020-04-05T23:43:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.abekoh.dev/tags/java/</loc>
     <lastmod>2020-04-05T23:43:00+09:00</lastmod>
   </url>
   
@@ -203,6 +203,11 @@
   </url>
   
   <url>
+    <loc>https://blog.abekoh.dev/tags/go/</loc>
+    <lastmod>2019-12-21T13:52:48+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://blog.abekoh.dev/post/get-google-token-with-go/</loc>
     <lastmod>2019-12-21T13:52:48+09:00</lastmod>
   </url>
@@ -260,11 +265,6 @@
   <url>
     <loc>https://blog.abekoh.dev/post/start-blog/</loc>
     <lastmod>2019-12-11T00:48:56+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.abekoh.dev/</loc>
-    <lastmod>2019-12-08T14:06:13+09:00</lastmod>
   </url>
   
   <url>

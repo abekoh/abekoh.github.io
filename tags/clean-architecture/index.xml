@@ -6,11 +6,7 @@
     <description>Recent content in Clean Architecture on abekoh&#39;s tech note</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>© 2019 abekoh</copyright>
-    <lastBuildDate>Mon, 21 Dec 2020 20:39:03 +0900</lastBuildDate>
-    
-	<atom:link href="https://blog.abekoh.dev/tags/clean-architecture/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Mon, 21 Dec 2020 20:39:03 +0900</lastBuildDate><atom:link href="https://blog.abekoh.dev/tags/clean-architecture/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[Qiita] トランザクションスクリプトなシステムをもとに、Cleanなシステムを構築する</title>
       <link>https://blog.abekoh.dev/post/advent-calendar-2020-ddd/</link>
